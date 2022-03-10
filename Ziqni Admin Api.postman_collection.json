@@ -24627,7 +24627,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{customFieldKey0}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{customFieldKey0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24692,13 +24692,10 @@
 				{
 					"name": "Get units of measure",
 					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/units-of-measure?id=eiusmod sed c&id=deserunt&_limit=-48278460&_skip=-48278460",
+							"raw": "{{baseUrl}}/units-of-measure?id={{unitOfMeasureId0}},{{unitOfMeasureId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -24708,22 +24705,16 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "eiusmod sed c",
-									"description": "The unique identifiers of the resources"
-								},
-								{
-									"key": "id",
-									"value": "deserunt",
-									"description": "The unique identifiers of the resources"
+									"value": "{{unitOfMeasureId0}},{{unitOfMeasureId1}}"
 								},
 								{
 									"key": "_limit",
-									"value": "-48278460",
+									"value": "{{defaultLimit}}",
 									"description": "Limit the returned total records found"
 								},
 								{
 									"key": "_skip",
-									"value": "-48278460",
+									"value": "{{defaultSkip}}",
 									"description": "Skip the returned records found and return the next batch of records"
 								}
 							]
@@ -24735,9 +24726,6 @@
 				{
 					"name": "Update units of measure",
 					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
 						"method": "PUT",
 						"header": [
 							{
@@ -24747,7 +24735,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    }\n]",
+							"raw": "[\n    {\n        \"id\":\"a9BrdH8BF8NRVIxZrgj0\",\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n            },\n        \"name\": \"Test_name-23662265-c15f-43e4-8ddd-5e5275a47bd0\",\n        \"description\": \"updated Test description\",\n        \"isoCode\": null,\n        \"symbol\": null,\n        \"multiplier\": 0.3594221543971534,\n        \"unitOfMeasureType\": \"Other\"\n}\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24770,9 +24758,6 @@
 				{
 					"name": "Create units of measure",
 					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
 						"method": "POST",
 						"header": [
 							{
@@ -24782,7 +24767,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    }\n]",
+							"raw": "[\n    {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n            },\n        \"name\": \"Test_name-23662265-c15f-43e4-8ddd-5e5275a47bd0\",\n        \"key\": \"Test_key-aa7e9073-1d88-4119-857a-ff962ff42e0d50\",\n        \"description\": \"Test description\",\n        \"isoCode\": null,\n        \"symbol\": null,\n        \"multiplier\": 0.3594221543971534,\n        \"unitOfMeasureType\": \"Other\"\n},\n{\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n            },\n        \"name\": \"Test_name-23662265-c15f-43e4-8ddd-5e5275a47bd0\",\n        \"key\": \"Test_key-aa7e9073-1d88-4119-857a-ff962ff42e0d60\",\n        \"description\": \"Test description\",\n        \"isoCode\": null,\n        \"symbol\": null,\n        \"multiplier\": 0.3594221543971534,\n        \"unitOfMeasureType\": \"Other\"\n}\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24805,13 +24790,10 @@
 				{
 					"name": "Delete units of measure",
 					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/units-of-measure?id=eiusmod sed c&id=deserunt",
+							"raw": "{{baseUrl}}/units-of-measure?id={{unitOfMeasureId1}}",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -24821,13 +24803,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "eiusmod sed c",
-									"description": "The unique identifiers of the resources"
-								},
-								{
-									"key": "id",
-									"value": "deserunt",
-									"description": "The unique identifiers of the resources"
+									"value": "{{unitOfMeasureId1}}"
 								}
 							]
 						},
@@ -24838,9 +24814,6 @@
 				{
 					"name": "Get units of measure by query",
 					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
 						"method": "POST",
 						"header": [
 							{
@@ -24850,7 +24823,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"mustNot\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"should\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"gte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"gt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"range\": [\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"sortBy\": [\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Desc\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Asc\"\n        }\n    ],\n    \"multiFields\": [\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"includeFields\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasNoValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"shouldMatch\": 10,\n    \"skip\": 5,\n    \"limit\": 23,\n    \"constraints\": [\n        \"some text\",\n        \"some text\"\n    ]\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{unitOfMeasureKey}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24874,9 +24847,6 @@
 				{
 					"name": "Delete units of measure by query",
 					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
 						"method": "POST",
 						"header": [
 							{
@@ -24886,7 +24856,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"mustNot\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"should\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"gte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"gt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"range\": [\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"sortBy\": [\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Desc\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Asc\"\n        }\n    ],\n    \"multiFields\": [\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"includeFields\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasNoValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"shouldMatch\": 10,\n    \"skip\": 5,\n    \"limit\": 23,\n    \"constraints\": [\n        \"some text\",\n        \"some text\"\n    ]\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{unitOfMeasureKey}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -72533,6 +72503,21 @@
 		{
 			"key": "actionTypeKey",
 			"value": "Test_key-b3eae4e7-3890-47a1-aaf0-2111a420c26789"
+		},
+		{
+			"key": "unitOfMeasureId0",
+			"value": "a9BrdH8BF8NRVIxZrgj0",
+			"type": "string"
+		},
+		{
+			"key": "unitOfMeasureId1",
+			"value": "bNBrdH8BF8NRVIxZrgj4",
+			"type": "string"
+		},
+		{
+			"key": "unitOfMeasureKey",
+			"value": "Test_key-aa7e9073-1d88-4119-857a-ff962ff42e0d50",
+			"type": "string"
 		}
 	]
 }
