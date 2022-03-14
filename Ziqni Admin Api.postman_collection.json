@@ -7306,38 +7306,86 @@
 			"item": [
 				{
 					"name": "create Action Types",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// get the length of request body",
+									"var requestLength = requestJson.length;",
+									"for (i = 0; i < requestLength; i++) {",
+									"    // set the name variable",
+									"    pm.collectionVariables.set(\"actionTypeName\".concat([i]), requestJson[i].name);",
+									"    // set the action type key",
+									"    pm.collectionVariables.set(\"actionTypeKey\".concat([i]), requestJson[i].key);",
+									"}",
+									"",
+									"",
+									"// parse response",
+									"var responseJson = JSON.parse(responseBody);",
+									"",
+									"// get the length of results",
+									"var responseLength = responseJson.results.length;",
+									"for (i = 0; i < responseLength; i++) {",
+									"    // set the action type id",
+									"    pm.collectionVariables.set(\"actionTypeId\".concat([i]), responseJson.results[i].id);",
+									"",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n   {\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"b361f6dd-b5cb-4442-a786-970c9c869eb5=981ad034-4576-4018-b916-18f882251757\"\n        },\n    \"name\": \"Test_name-332452b4-c047-45fe-adfc-b311321014c7\",\n    \"key\": \"Test_key-b3eae4e7-3890-47a1-aaf0-2111a420c267\",\n    \"description\": null,\n    \"unitOfMeasureType\": \"Other\",\n    \"addConstraints\": []\n}\n]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/action-types",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"action-types"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update Action Types",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n    {\n    \"id\":\"{{actionTypeId0}}\",\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n        },\n    \"name\": \"Test_name-332452b4-c047-45fe-adfc-b311321014c7\",\n    \"key\": \"Test_key-b3eae4e7-3890-47a1-aaf0-2111a420c267\",\n    \"description\": \"Updated Test Description\",\n    \"unitOfMeasureType\": \"Other\",\n    \"addConstraints\": [],\n    \"removeConstraints\": []\n}\n]",
+							"raw": "[\n   {\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"b361f6ddb5cb\":\"MetaValue\"\n        },\n    \"name\": \"Test_name-332452b4-c047-45fe-adfc-b31164376879\",\n    \"key\": \"Test_key-b3eae4e7-3890-47a1-aaf0-2111a420f456\",\n    \"description\": \"Test Description 0\",\n    \"unitOfMeasureType\": \"Other\",\n    \"addConstraints\": []\n},\n{\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"b361f6dd18f882251757\":\"MetaValue\"\n        },\n    \"name\": \"Test_name-332452b4-c047-45fe-adfc-b311321014c7\",\n    \"key\": \"Test_key-b3eae4e7-3890-47a1-aaf0-2111a420gh63656\",\n    \"description\": \"Test Description 1\",\n    \"unitOfMeasureType\": \"Other\",\n    \"addConstraints\": []\n}\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7359,10 +7407,50 @@
 				{
 					"name": "get Action Types",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/action-types?id={{actionTypeId0}},{{actionTypeId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/action-types?id={{actionTypeId0}},{{actionTypeId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -7376,12 +7464,12 @@
 								},
 								{
 									"key": "_limit",
-									"value": "{{defaultLimit}}",
+									"value": "{{ziqniDefaultLimit}}",
 									"description": "Limit the returned total records found"
 								},
 								{
 									"key": "_skip",
-									"value": "{{defaultSkip}}",
+									"value": "{{ziqniDefaultSkip}}",
 									"description": "Skip the returned records found and return the next batch of records"
 								}
 							]
@@ -7390,13 +7478,119 @@
 					"response": []
 				},
 				{
+					"name": "update Action Types",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n    \"id\":\"{{actionTypeId0}}\",\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n        },\n    \"name\": \"Test_name-332452b4-c047-45fe-adfc-b311321014c7\",\n    \"description\": \"Updated Test Description\",\n    \"unitOfMeasureType\": \"Other\",\n    \"addConstraints\": [],\n    \"removeConstraints\": []\n}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/action-types",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"action-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "get Action Types By Query",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{actionTypeKey}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{actionTypeKey0}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7419,6 +7613,46 @@
 				{
 					"name": "delete Action Types",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -7442,11 +7676,51 @@
 				{
 					"name": "delete Action Types By Query",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"productRefId\",\n            \"queryValues\": [\n                \"{{productRefId1}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{actionTypeKey1}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -41088,6 +41362,71 @@
 					"response": []
 				},
 				{
+					"name": "Get list of all languages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/languages/available?_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"languages",
+								"available"
+							],
+							"query": [
+								{
+									"key": "_limit",
+									"value": "{{ziqniDefaultLimit}}",
+									"description": "Limit the returned total records found"
+								},
+								{
+									"key": "_skip",
+									"value": "{{ziqniDefaultSkip}}",
+									"description": "Skip the returned records found and return the next batch of records"
+								}
+							]
+						},
+						"description": "Returns a list of all avaialable Languages"
+					},
+					"response": []
+				},
+				{
+					"name": "Get languages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/languages?id={{languageId0}},{{languageId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"languages"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{languageId0}},{{languageId1}}"
+								},
+								{
+									"key": "_limit",
+									"value": "{{ziqniDefaultLimit}}",
+									"description": "Limit the returned total records found"
+								},
+								{
+									"key": "_skip",
+									"value": "{{ziqniDefaultSkip}}",
+									"description": "Skip the returned records found and return the next batch of records"
+								}
+							]
+						},
+						"description": "Returns a list of Languages available in the space. This assumes that languages have first been uploaded via a POST request or web console"
+					},
+					"response": []
+				},
+				{
 					"name": "Update languages",
 					"request": {
 						"method": "PUT",
@@ -41116,71 +41455,6 @@
 							]
 						},
 						"description": "Update an existing Language in the Ziqni database"
-					},
-					"response": []
-				},
-				{
-					"name": "Get list of all languages",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/languages/available?_limit={{defaultLimit}}&_skip={{defaultSkip}}",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"languages",
-								"available"
-							],
-							"query": [
-								{
-									"key": "_limit",
-									"value": "{{defaultLimit}}",
-									"description": "Limit the returned total records found"
-								},
-								{
-									"key": "_skip",
-									"value": "{{defaultSkip}}",
-									"description": "Skip the returned records found and return the next batch of records"
-								}
-							]
-						},
-						"description": "Returns a list of all avaialable Languages"
-					},
-					"response": []
-				},
-				{
-					"name": "Get languages",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/languages?id={{languageId0}},{{languageId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"languages"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "{{languageId0}},{{languageId1}}"
-								},
-								{
-									"key": "_limit",
-									"value": "{{defaultLimit}}",
-									"description": "Limit the returned total records found"
-								},
-								{
-									"key": "_skip",
-									"value": "{{defaultSkip}}",
-									"description": "Skip the returned records found and return the next batch of records"
-								}
-							]
-						},
-						"description": "Returns a list of Languages available in the space. This assumes that languages have first been uploaded via a POST request or web console"
 					},
 					"response": []
 				},
@@ -47002,7 +47276,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"tags\": null,\n        \"productRefId\": \"10010\",\n        \"name\": \"test1\",\n        \"description\": null,\n        \"adjustmentFactor\": 1.0,\n        \"actionTypeAdjustmentFactors\": [],\n        \"customFields\": {},\n        \"metadata\": {},\n        \"translations\": [\n            {\n                \"languageKey\": \"Wayuu\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test1\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"Tunisian Arabic\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test-temp\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"Interlingua\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Level-Up\"\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"tags\": null,\n        \"productRefId\": \"10009\",\n        \"name\": \"test1\",\n        \"description\": null,\n        \"adjustmentFactor\": 1.0,\n        \"actionTypeAdjustmentFactors\": [],\n        \"customFields\": {},\n        \"metadata\": {},\n        \"translations\": [\n            {\n                \"languageKey\": \"Wayuu\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test1\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"Tunisian Arabic\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test-temp\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"Interlingua\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Level-Up\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
+							"raw": "[\n    {\n        \"tags\": null,\n        \"productRefId\": \"10010\",\n        \"name\": \"test1\",\n        \"description\": null,\n        \"adjustmentFactor\": 1.0,\n        \"actionTypeAdjustmentFactors\": [],\n        \"customFields\": {},\n        \"metadata\": {},\n        \"translations\": [\n            {\n                \"languageKey\": \"ady\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test1\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"ae\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test-temp\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"mdf\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Level-Up\"\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"tags\": null,\n        \"productRefId\": \"10009\",\n        \"name\": \"test1\",\n        \"description\": null,\n        \"adjustmentFactor\": 1.0,\n        \"actionTypeAdjustmentFactors\": [],\n        \"customFields\": {},\n        \"metadata\": {},\n        \"translations\": [\n            {\n                \"languageKey\": \"ady\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test1\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"ae\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test-temp\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"mdf\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Level-Up\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -47019,49 +47293,6 @@
 							]
 						},
 						"description": "Use this endpoint to create products.\n\nThe request body accepts a list of CreateProductRequest."
-					},
-					"response": []
-				},
-				{
-					"name": "Update products",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"// parse request",
-									"var requestJson = JSON.parse(request.data);",
-									"",
-									"// set the name variable",
-									"pm.collectionVariables.set(\"productName0\", requestJson[0].name);",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n    {\n        \"id\": \"{{productId0}}\",\n        \"metadata\": {\n            \"key1\": \"value1\",\n            \"key2\": \"value2\"\n        },\n        \"tags\": [],\n        \"customFields\": {\n            \"customField1\": \"customFieldValue1\",\n            \"customField2\": \"customFieldValue2\"\n        },\n        \"name\": \"new-name\",\n        \"description\": \"new-description\",\n        \"adjustmentFactor\": 28.55,\n        \"actionTypeAdjustmentFactors\": []\n    }\n]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/products",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"products"
-							]
-						},
-						"description": "Update existing products."
 					},
 					"response": []
 				},
@@ -47126,7 +47357,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/products?id={{productId0}},{{productId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/products?id={{productId0}},{{productId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -47141,12 +47372,12 @@
 								},
 								{
 									"key": "_limit",
-									"value": "{{defaultLimit}}",
+									"value": "{{ziqniDefaultLimit}}",
 									"description": "Limit the number of records to return"
 								},
 								{
 									"key": "_skip",
-									"value": "{{defaultSkip}}",
+									"value": "{{ziqniDefaultSkip}}",
 									"description": "Skip the returned records found and return the next batch of records"
 								}
 							]
@@ -47156,12 +47387,135 @@
 					"response": []
 				},
 				{
+					"name": "Update products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// set the name variable",
+									"pm.collectionVariables.set(\"productName0\", requestJson[0].name);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"{{productId0}}\",\n        \"metadata\": {\n            \"key1\": \"value1\",\n            \"key2\": \"value2\"\n        },\n        \"tags\": [],\n        \"customFields\": {\n            \"customField1\": \"customFieldValue1\",\n            \"customField2\": \"customFieldValue2\"\n        },\n        \"name\": \"new-name\",\n        \"description\": \"new-description\",\n        \"adjustmentFactor\": 28.55,\n        \"actionTypeAdjustmentFactors\": []\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/products",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						},
+						"description": "Update existing products."
+					},
+					"response": []
+				},
+				{
 					"name": "Get products by reference ids",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/products/find-by-ref-identifiers/?refIds={{productRefId0}},{{productRefId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/products/find-by-ref-identifiers/?refIds={{productRefId0}},{{productRefId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -47178,12 +47532,12 @@
 								},
 								{
 									"key": "_limit",
-									"value": "{{defaultLimit}}",
+									"value": "{{ziqniDefaultLimit}}",
 									"description": "Limit the returned total records found"
 								},
 								{
 									"key": "_skip",
-									"value": "{{defaultSkip}}",
+									"value": "{{ziqniDefaultSkip}}",
 									"description": "Skip the returned records found and return the next batch of records"
 								}
 							]
@@ -47195,6 +47549,46 @@
 				{
 					"name": "Get products by query",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -47223,6 +47617,46 @@
 				{
 					"name": "Delete products",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -47248,6 +47682,46 @@
 				{
 					"name": "Delete products by query",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -65202,7 +65676,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/units-of-measure?id={{unitOfMeasureId0}},{{unitOfMeasureId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/units-of-measure?id={{unitOfMeasureId0}},{{unitOfMeasureId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -65216,12 +65690,12 @@
 								},
 								{
 									"key": "_limit",
-									"value": "{{defaultLimit}}",
+									"value": "{{ziqniDefaultLimit}}",
 									"description": "Limit the returned total records found"
 								},
 								{
 									"key": "_skip",
-									"value": "{{defaultSkip}}",
+									"value": "{{ziqniDefaultSkip}}",
 									"description": "Skip the returned records found and return the next batch of records"
 								}
 							]
@@ -70026,6 +70500,56 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "productName0",
+			"value": ""
+		},
+		{
+			"key": "productRefId0",
+			"value": ""
+		},
+		{
+			"key": "productName1",
+			"value": ""
+		},
+		{
+			"key": "productRefId1",
+			"value": ""
+		},
+		{
+			"key": "productId0",
+			"value": ""
+		},
+		{
+			"key": "productId1",
+			"value": ""
+		},
+		{
+			"key": "actionTypeName0",
+			"value": ""
+		},
+		{
+			"key": "actionTypeKey0",
+			"value": ""
+		},
+		{
+			"key": "actionTypeName1",
+			"value": ""
+		},
+		{
+			"key": "actionTypeKey1",
+			"value": ""
+		},
+		{
+			"key": "actionTypeId0",
+			"value": ""
+		},
+		{
+			"key": "actionTypeId1",
+			"value": ""
 		}
 	]
 }
