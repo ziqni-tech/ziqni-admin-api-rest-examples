@@ -41593,7 +41593,44 @@
 					],
 					"request": {
 						"auth": {
-							"type": "oauth2"
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
 						},
 						"method": "POST",
 						"header": [
@@ -41604,7 +41641,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n    \"name\": \"name\",\n    \"memberRefId\": \"10001\",\n    \"memberType\": \"Individual\",\n    \"teamMembers\": null,\n    \"addConstraints\": [\n        \"disabled\"\n    ],\n    \"timeZoneOffset\": \"UTC\",\n    \"customFields\": {\n        \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n    },\n    \"metadata\": {},\n    \"tags\": null\n},\n{\n    \"name\": \"name1\",\n    \"memberRefId\": \"10002\",\n    \"memberType\": \"Individual\",\n    \"teamMembers\": null,\n    \"addConstraints\": [\n        \"disabled\"\n    ],\n    \"timeZoneOffset\": \"UTC\",\n    \"customFields\": {\n        \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n    },\n    \"metadata\": {},\n    \"tags\": null\n}\n]",
+							"raw": "[\n    {\n    \"name\": \"name\",\n    \"memberRefId\": \"1000156\",\n    \"memberType\": \"Individual\",\n    \"teamMembers\": null,\n    \"addConstraints\": [\n        \"disabled\"\n    ],\n    \"customFields\": {\n        \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n    },\n    \"metadata\": {},\n    \"tags\": null\n},\n{\n    \"name\": \"name1\",\n    \"memberRefId\": \"1000254\",\n    \"memberType\": \"Individual\",\n    \"teamMembers\": null,\n    \"addConstraints\": [\n        \"disabled\"\n    ],\n    \"customFields\": {\n        \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n    },\n    \"metadata\": {},\n    \"tags\": null\n}\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -41692,7 +41729,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"id\": \"{{memberId0}}\",\n        \"name\": \"updated name\",\n        \"memberType\": \"Individual\",\n        \"teamMembers\": [],\n        \"addConstraints\": [\n            \"disabled\"\n        ],\n        \"timeZoneOffset\": \"UTC\",\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n        },\n        \"metadata\": {\n            \"metaKey1\": \"metaValue1\",\n            \"metaKey2\": \"metaValue2\"\n        },\n        \"tags\": [\n            \"ziqniTagId\",\n            \"ziqniTagId\"\n        ]\n    }\n]",
+							"raw": "[\n    {\n        \"id\": \"{{memberId0}}\",\n        \"name\": \"updated name\",\n        \"memberType\": \"Individual\",\n        \"teamMembers\": [],\n        \"addConstraints\": [\n            \"disabled\"\n        ],\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n        },\n        \"metadata\": {\n            \"metaKey1\": \"metaValue1\",\n            \"metaKey2\": \"metaValue2\"\n        },\n        \"tags\": [\n            \"ziqniTagId\",\n            \"ziqniTagId\"\n        ]\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -41766,7 +41803,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"name\",\n            \"queryValues\": [\n                \"{{memberName0}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"name\",\n            \"queryValues\": [\n                \"{{memberName1}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
