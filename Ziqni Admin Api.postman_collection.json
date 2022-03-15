@@ -41625,6 +41625,43 @@
 					"response": []
 				},
 				{
+					"name": "Get members",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/members?id={{memberId0}},{{memberId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"members"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{memberId0}},{{memberId1}}"
+								},
+								{
+									"key": "_limit",
+									"value": "{{ziqniDefaultLimit}}",
+									"description": "Limit the returned total records found"
+								},
+								{
+									"key": "_skip",
+									"value": "{{ziqniDefaultSkip}}",
+									"description": "Skip the returned records found and return the next batch of records"
+								}
+							]
+						},
+						"description": "Returns a list of Members. This assumes that members have first been uploaded via a POST request or web console"
+					},
+					"response": []
+				},
+				{
 					"name": "Update members",
 					"event": [
 						{
@@ -41676,43 +41713,6 @@
 					"response": []
 				},
 				{
-					"name": "Get members",
-					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/members?id={{memberId0}},{{memberId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"members"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "{{memberId0}},{{memberId1}}"
-								},
-								{
-									"key": "_limit",
-									"value": "{{defaultLimit}}",
-									"description": "Limit the returned total records found"
-								},
-								{
-									"key": "_skip",
-									"value": "{{defaultSkip}}",
-									"description": "Skip the returned records found and return the next batch of records"
-								}
-							]
-						},
-						"description": "Returns a list of Members. This assumes that members have first been uploaded via a POST request or web console"
-					},
-					"response": []
-				},
-				{
 					"name": "Get members by ref id",
 					"request": {
 						"auth": {
@@ -41721,7 +41721,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/members/find-by-ref-identifiers?refIds={{memberRefId0}}, {{memberRefId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/members/find-by-ref-identifiers?refIds={{memberRefId0}}, {{memberRefId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -41737,12 +41737,12 @@
 								},
 								{
 									"key": "_limit",
-									"value": "{{defaultLimit}}",
+									"value": "{{ziqniDefaultLimit}}",
 									"description": "Limit the returned total records found"
 								},
 								{
 									"key": "_skip",
-									"value": "{{defaultSkip}}",
+									"value": "{{ziqniDefaultSkip}}",
 									"description": "Skip the returned records found and return the next batch of records"
 								}
 							]
@@ -70549,6 +70549,30 @@
 		},
 		{
 			"key": "actionTypeId1",
+			"value": ""
+		},
+		{
+			"key": "memberName0",
+			"value": ""
+		},
+		{
+			"key": "memberRefId0",
+			"value": ""
+		},
+		{
+			"key": "memberName1",
+			"value": ""
+		},
+		{
+			"key": "memberRefId1",
+			"value": ""
+		},
+		{
+			"key": "memberId0",
+			"value": ""
+		},
+		{
+			"key": "memberId1",
 			"value": ""
 		}
 	]
