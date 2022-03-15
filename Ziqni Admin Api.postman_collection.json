@@ -7720,7 +7720,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{actionTypeKey1}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{actionTypeKey1}}\"\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7746,70 +7746,28 @@
 			"name": "api-keys",
 			"item": [
 				{
-					"name": "{id}",
-					"item": [
-						{
-							"name": "Get api keys by Id",
-							"request": {
-								"auth": {
-									"type": "oauth2"
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{ziqniAdminApiBaseUrl}}/api-keys/:id",
-									"host": [
-										"{{ziqniAdminApiBaseUrl}}"
-									],
-									"path": [
-										"api-keys",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "repr",
-											"description": "(Required) Unique identifier of the resource"
-										}
-									]
-								},
-								"description": "Returns an Api key by identifier provided. This assumes that api keys have first been created via a POST request or web console"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete api keys by Id",
-							"request": {
-								"auth": {
-									"type": "oauth2"
-								},
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{ziqniAdminApiBaseUrl}}/api-keys/:id",
-									"host": [
-										"{{ziqniAdminApiBaseUrl}}"
-									],
-									"path": [
-										"api-keys",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "repr",
-											"description": "(Required) Unique identifier of the resource"
-										}
-									]
-								},
-								"description": "Delete the Api key for a given identifier specified"
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "Create api keys",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse response",
+									"var responseJson = JSON.parse(responseBody);",
+									"",
+									"// get the length of results",
+									"var responseLength = responseJson.results.length;",
+									"for (i = 0; i < responseLength; i++) {",
+									"    // set the api key id",
+									"    pm.collectionVariables.set(\"apiKeyId\".concat([i]), responseJson.results[i].id);",
+									"",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "oauth2"
@@ -7844,7 +7802,44 @@
 					"response": []
 				},
 				{
+					"name": "Get api keys by Id",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/api-keys/{{apiKeyId0}}",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"api-keys",
+								"{{apiKeyId0}}"
+							]
+						},
+						"description": "Returns an Api key by identifier provided. This assumes that api keys have first been created via a POST request or web console"
+					},
+					"response": []
+				},
+				{
 					"name": "Update api keys",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// set the name variable",
+									"pm.collectionVariables.set(\"apiKeyDescription0\", requestJson.description);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "oauth2"
@@ -7858,7 +7853,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"{{apiKey0}}\",\n    \"customFields\": {\n        \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\":\"name_update\"\n    },\n    \"tags\": [\"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"],\n    \"metadata\": {\n        \"b03f83fa-c4e1-4353-a776-e9d63d614ff1\":\"24f910de-2e6b-453f-88bc-4be3b89b62b8\"\n    },\n    \"description\": \"User api key\",\n    \"whiteListIPs\": [\n        \"123.221.22.1\",\n        \"333.224.34.1\"\n    ],\n    \"role\": \"Web\",\n    \"addConstraints\":[\"active\",\"default\"],\n    \"removeConstraints\": [\"active\"]\n}",
+							"raw": "{\n    \"id\": \"{{apiKeyId0}}\",\n    \"customFields\": {\n        \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\":\"name_update\"\n    },\n    \"tags\": [\"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"],\n    \"metadata\": {\n        \"b03f83fa-c4e1-4353-a776-e9d63d614ff1\":\"24f910de-2e6b-453f-88bc-4be3b89b62b8\"\n    },\n    \"description\": \"updated User api key\",\n    \"whiteListIPs\": [\n        \"123.221.22.1\",\n        \"333.224.34.1\"\n    ],\n    \"role\": \"Web\",\n    \"addConstraints\":[\"active\",\"default\"],\n    \"removeConstraints\": [\"default\"]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7887,7 +7882,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/api-keys?id={{apiKey0}},{{apiKey1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/api-keys?id={{apiKeyId0}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -7897,17 +7892,17 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "{{apiKey0}},{{apiKey1}}",
+									"value": "{{apiKeyId0}}",
 									"description": "The unique identifiers of the resources"
 								},
 								{
 									"key": "_limit",
-									"value": "{{defaultLimit}}",
+									"value": "{{ziqniDefaultLimit}}",
 									"description": "Limit the returned total records found"
 								},
 								{
 									"key": "_skip",
-									"value": "{{defaultSkip}}",
+									"value": "{{ziqniDefaultSkip}}",
 									"description": "Skip the returned records found and return the next batch of records"
 								}
 							]
@@ -7931,7 +7926,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"description\",\n            \"queryValues\": [\n                \"{{apiKeyDescription0}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"id\",\n            \"queryValues\": [\n                \"{{apiKeyId0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7953,6 +7948,28 @@
 					"response": []
 				},
 				{
+					"name": "Delete api keys by Id",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/api-keys/{{apiKeyId0}}",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"api-keys",
+								"{{apiKeyId0}}"
+							]
+						},
+						"description": "Delete the Api key for a given identifier specified"
+					},
+					"response": []
+				},
+				{
 					"name": "Delete api keys by query",
 					"request": {
 						"auth": {
@@ -7967,7 +7984,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"description\",\n            \"queryValues\": [\n                \"{{apiKeyDescription0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"id\",\n            \"queryValues\": [\n                \"{{apiKeyId0}}\"\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -41866,7 +41883,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"memberRefId\",\n            \"queryValues\": [\n                \"{{memberRefId1}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"memberRefId\",\n            \"queryValues\": [\n                \"{{memberRefId1}}\"\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -47768,7 +47785,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"productRefId\",\n            \"queryValues\": [\n                \"{{productRefId1}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"productRefId\",\n            \"queryValues\": [\n                \"{{productRefId1}}\"\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70610,6 +70627,10 @@
 		},
 		{
 			"key": "memberId1",
+			"value": ""
+		},
+		{
+			"key": "apiKeyId0",
 			"value": ""
 		}
 	]
