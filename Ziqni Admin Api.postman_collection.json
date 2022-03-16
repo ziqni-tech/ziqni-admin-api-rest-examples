@@ -65711,7 +65711,81 @@
 			"item": [
 				{
 					"name": "Create units of measure",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// get the length of request body",
+									"var requestLength = requestJson.length;",
+									"for (i = 0; i < requestLength; i++) {",
+									"    // set the name variable",
+									"    pm.collectionVariables.set(\"unitOfMeasureName\".concat([i]), requestJson[i].name);",
+									"    // set the product reference id",
+									"    pm.collectionVariables.set(\"unitOfMeasureKey\".concat([i]), requestJson[i].key);",
+									"}",
+									"",
+									"",
+									"// parse response",
+									"var responseJson = JSON.parse(responseBody);",
+									"",
+									"// get the length of results",
+									"var responseLength = responseJson.results.length;",
+									"for (i = 0; i < responseLength; i++) {",
+									"    // set the product id",
+									"    pm.collectionVariables.set(\"unitOfMeasureId\".concat([i]), responseJson.results[i].id);",
+									"",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -65742,40 +65816,48 @@
 					"response": []
 				},
 				{
-					"name": "Update units of measure",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n    {\n        \"id\": \"{{unitOfMeasureId0}}\",\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n            },\n        \"name\": \"Test_name-23662265-c15f-43e4-8ddd-5e5275a47bd0\",\n        \"description\": \"Updated Test description\",\n        \"isoCode\": null,\n        \"symbol\": null,\n        \"multiplier\": 0.3594221543971534,\n        \"unitOfMeasureType\": \"Other\"\n}\n]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/units-of-measure",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"units-of-measure"
-							]
-						},
-						"description": "Create a new Unit of measure in the Ziqni database"
-					},
-					"response": []
-				},
-				{
 					"name": "Get units of measure",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -65808,8 +65890,135 @@
 					"response": []
 				},
 				{
+					"name": "Update units of measure",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// set the name variable",
+									"pm.collectionVariables.set(\"unitOfMeasureName0\", requestJson[0].name);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"{{unitOfMeasureId0}}\",\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n            },\n        \"name\": \"Test_name-23662265-c15f-43e4-8ddd-5e5275a47bd0\",\n        \"description\": \"Updated Test description\",\n        \"isoCode\": null,\n        \"symbol\": null,\n        \"multiplier\": 0.3594221543971534,\n        \"unitOfMeasureType\": \"Other\"\n}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/units-of-measure",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"units-of-measure"
+							]
+						},
+						"description": "Create a new Unit of measure in the Ziqni database"
+					},
+					"response": []
+				},
+				{
 					"name": "Get units of measure by query",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -65819,7 +66028,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{unitOfMeasureKey}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{unitOfMeasureKey0}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -65843,10 +66052,50 @@
 				{
 					"name": "Delete units of measure",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/units-of-measure?id={{unitOfMeasureId1}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/units-of-measure?id={{unitOfMeasureId0}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -65856,7 +66105,15 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "{{unitOfMeasureId1}}"
+									"value": "{{unitOfMeasureId0}}"
+								},
+								{
+									"key": "_limit",
+									"value": "{{ziqniDefaultLimit}}"
+								},
+								{
+									"key": "_skip",
+									"value": "{{ziqniDefaultSkip}}"
 								}
 							]
 						},
@@ -65867,6 +66124,46 @@
 				{
 					"name": "Delete units of measure by query",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -65876,7 +66173,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{unitOfMeasureKey}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{unitOfMeasureKey1}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70708,6 +71005,30 @@
 		},
 		{
 			"key": "customFieldId1",
+			"value": ""
+		},
+		{
+			"key": "unitOfMeasureName0",
+			"value": ""
+		},
+		{
+			"key": "unitOfMeasureKey0",
+			"value": ""
+		},
+		{
+			"key": "unitOfMeasureName1",
+			"value": ""
+		},
+		{
+			"key": "unitOfMeasureKey1",
+			"value": ""
+		},
+		{
+			"key": "unitOfMeasureId0",
+			"value": ""
+		},
+		{
+			"key": "unitOfMeasureId1",
 			"value": ""
 		}
 	]
