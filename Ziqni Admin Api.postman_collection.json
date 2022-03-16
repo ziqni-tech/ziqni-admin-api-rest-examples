@@ -35149,6 +35149,40 @@
 			"item": [
 				{
 					"name": "Create custom fields",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// get the length of request body",
+									"var requestLength = requestJson.length;",
+									"for (i = 0; i < requestLength; i++) {",
+									"    // set the name variable",
+									"    pm.collectionVariables.set(\"customFieldName\".concat([i]), requestJson[i].name);",
+									"    // set the product reference id",
+									"    pm.collectionVariables.set(\"customFieldKey\".concat([i]), requestJson[i].key);",
+									"}",
+									"",
+									"",
+									"// parse response",
+									"var responseJson = JSON.parse(responseBody);",
+									"",
+									"// get the length of results",
+									"var responseLength = responseJson.results.length;",
+									"for (i = 0; i < responseLength; i++) {",
+									"    // set the product id",
+									"    pm.collectionVariables.set(\"customFieldId\".concat([i]), responseJson.results[i].id);",
+									"",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "oauth2"
@@ -35183,7 +35217,59 @@
 					"response": []
 				},
 				{
+					"name": "Get custom fields",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/custom-fields?id={{customFieldId0}},{{customFieldId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"custom-fields"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{customFieldId0}},{{customFieldId1}}"
+								},
+								{
+									"key": "_limit",
+									"value": "{{ziqniDefaultLimit}}",
+									"description": "Limit the returned total records found"
+								},
+								{
+									"key": "_skip",
+									"value": "{{ziqniDefaultSkip}}",
+									"description": "Skip the returned records found and return the next batch of records"
+								}
+							]
+						},
+						"description": "Returns a list of Custom fields. This assumes that custom fields have first been uploaded via a POST request or web console"
+					},
+					"response": []
+				},
+				{
 					"name": "Update custom fields",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// set the name variable",
+									"pm.collectionVariables.set(\"customFieldName0\", requestJson[0].name);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "oauth2"
@@ -35214,43 +35300,6 @@
 							]
 						},
 						"description": "Update existing Custom fields in the Ziqni database"
-					},
-					"response": []
-				},
-				{
-					"name": "Get custom fields",
-					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/custom-fields?id={{customFieldId1}},{{customFieldId1}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"custom-fields"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "{{customFieldId1}},{{customFieldId1}}"
-								},
-								{
-									"key": "_limit",
-									"value": "{{defaultLimit}}",
-									"description": "Limit the returned total records found"
-								},
-								{
-									"key": "_skip",
-									"value": "{{defaultSkip}}",
-									"description": "Skip the returned records found and return the next batch of records"
-								}
-							]
-						},
-						"description": "Returns a list of Custom fields. This assumes that custom fields have first been uploaded via a POST request or web console"
 					},
 					"response": []
 				},
@@ -35332,7 +35381,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{customFieldKey0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{customFieldKey1}}\"\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70631,6 +70680,34 @@
 		},
 		{
 			"key": "apiKeyId0",
+			"value": ""
+		},
+		{
+			"key": "customFieldName0",
+			"value": ""
+		},
+		{
+			"key": "customFieldKey0",
+			"value": ""
+		},
+		{
+			"key": "customFieldName1",
+			"value": ""
+		},
+		{
+			"key": "customFieldKey1",
+			"value": ""
+		},
+		{
+			"key": "customFieldId0",
+			"value": ""
+		},
+		{
+			"key": "apiKeyDescription0",
+			"value": ""
+		},
+		{
+			"key": "customFieldId1",
 			"value": ""
 		}
 	]
