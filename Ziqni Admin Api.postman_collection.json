@@ -41397,7 +41397,79 @@
 			"item": [
 				{
 					"name": "Create languages",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// get the length of request body",
+									"var requestLength = requestJson.length;",
+									"for (i = 0; i < requestLength; i++) {",
+									"    // set the key",
+									"    pm.collectionVariables.set(\"languageKey\".concat([i]), requestJson[i].key);",
+									"}",
+									"",
+									"",
+									"// parse response",
+									"var responseJson = JSON.parse(responseBody);",
+									"",
+									"// get the length of results",
+									"var responseLength = responseJson.results.length;",
+									"for (i = 0; i < responseLength; i++) {",
+									"    // set the product id",
+									"    pm.collectionVariables.set(\"languageId\".concat([i]), responseJson.results[i].id);",
+									"",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -41430,6 +41502,46 @@
 				{
 					"name": "Get list of all languages",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -41461,6 +41573,46 @@
 				{
 					"name": "Get languages",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -41495,6 +41647,46 @@
 				{
 					"name": "Update languages",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -41527,6 +41719,46 @@
 				{
 					"name": "Get languages by query",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -41536,7 +41768,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{languageKey}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{languageKey0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -41560,6 +41792,46 @@
 				{
 					"name": "Delete languages",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -41596,7 +41868,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{languageKey}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"key\",\n            \"queryValues\": [\n                \"{{languageKey1}}\"\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -71029,6 +71301,22 @@
 		},
 		{
 			"key": "unitOfMeasureId1",
+			"value": ""
+		},
+		{
+			"key": "languageKey0",
+			"value": ""
+		},
+		{
+			"key": "languageKey1",
+			"value": ""
+		},
+		{
+			"key": "languageId0",
+			"value": ""
+		},
+		{
+			"key": "languageId1",
 			"value": ""
 		}
 	]
