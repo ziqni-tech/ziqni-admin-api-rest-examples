@@ -11353,7 +11353,7 @@
 									"// get the length of results",
 									"var responseLength = responseJson.results.length;",
 									"for (i = 0; i < responseLength; i++) {",
-									"    // set the event id",
+									"    // set the file id",
 									"    pm.collectionVariables.set(\"fileId\".concat([i]), responseJson.results[i].id);",
 									"    pm.collectionVariables.set(\"externalReference\".concat([i]), responseJson.results[i].externalReference);",
 									"",
@@ -11376,7 +11376,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":{\"6318a04e-6a13-490d-9aa6-f9b5cb8208e6\":\"51698300-ba75-4e7c-83ad-f3f8eed25ff6\"},\n    \"repositoryId\":\"TU8g2n8Bw2Bq0AUK0Qh2\",\n    \"name\":\"Test_name-40ca1eb2-f206-4aea-b2b1-d12f626c93e4\",\n    \"mimeType\":\"image/jpeg\",\n    \"parentFolderPath\":\"/files\",\n    \"constraints\":null\n    }",
+							"raw": "{\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":{\"6318a04e-6a13-490d-9aa6-f9b5cb8208e6\":\"51698300-ba75-4e7c-83ad-f3f8eed25ff6\"},\n    \"repositoryId\":\"-o2A5H8Bz1qQB8Z6NiJJ\",\n    \"name\":\"Test_name-40ca1eb2-f206-4aea-b2b1-d12f626c93e4\",\n    \"mimeType\":\"image/jpeg\",\n    \"parentFolderPath\":\"/files\",\n    \"constraints\":null\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11438,6 +11438,25 @@
 				},
 				{
 					"name": "Update file object",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// get the length of request body",
+									"var requestLength = requestJson.length;",
+									"for (i = 0; i < requestLength; i++) {",
+									"    // set the member ref id variable",
+									"    pm.collectionVariables.set(\"fileName\".concat([i]), requestJson[i].name);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "oauth2"
@@ -11451,7 +11470,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    }\n]",
+							"raw": "[\n    {\n        \"id\":\"{{fileId0}}\",\n        \"customFields\":null,\n        \"tags\":null,\n        \"metadata\":{\"63b2bd6e-239e-47b9-b5c6-bdc71789c7a6\":\"bca1e8b4-4e7d-4d9c-8e40-dabc05f32c3a\"},\n        \"repositoryId\":\"lWJD2n8BnFyrDQJtjDMp\",\n        \"name\":\"update_Test_name-b0178198-d11f-4b66-9c9d-08a4dfd7fb94\",\n        \"mimeType\":\"image/jpeg\",\n        \"parentFolderPath\":\"/files\",\n        \"constraints\":null\n        }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11485,7 +11504,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"mustNot\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"should\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"gte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"gt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"range\": [\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"sortBy\": [\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Desc\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Asc\"\n        }\n    ],\n    \"multiFields\": [\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"includeFields\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasNoValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"shouldMatch\": 10,\n    \"skip\": 5,\n    \"limit\": 23,\n    \"constraints\": [\n        \"some text\",\n        \"some text\"\n    ]\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"name\",\n            \"queryValues\": [\n                \"{{fileName0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11493,7 +11512,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files/query?id=eiusmod sed c&id=deserunt",
+							"raw": "{{ziqniAdminApiBaseUrl}}/files/query?id={{fileId0}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -11504,13 +11523,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "eiusmod sed c",
-									"description": "The unique identifiers of the resources"
-								},
-								{
-									"key": "id",
-									"value": "deserunt",
-									"description": "The unique identifiers of the resources"
+									"value": "{{fileId0}}"
 								}
 							]
 						},
@@ -11536,19 +11549,22 @@
 							"formdata": [
 								{
 									"key": "customFields",
-									"value": "{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}",
+									"value": "null",
+									"contentType": "application/json",
 									"description": "undefined",
 									"type": "text"
 								},
 								{
 									"key": "tags",
-									"value": "{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}",
+									"value": "null",
+									"contentType": "application/json",
 									"description": "undefined",
 									"type": "text"
 								},
 								{
 									"key": "metadata",
-									"value": "{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}",
+									"value": "null",
+									"contentType": "application/json",
 									"description": "undefined",
 									"type": "text"
 								},
@@ -11560,13 +11576,14 @@
 								},
 								{
 									"key": "files",
-									"value": "[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}]",
+									"contentType": "multipart/form-data",
 									"description": "undefined",
-									"type": "text"
+									"type": "file",
+									"src": "/home/given/Pictures/Screenshot from 2022-03-15 14-22-55.png"
 								},
 								{
 									"key": "repositoryId",
-									"value": "mollit nulla",
+									"value": "-o2A5H8Bz1qQB8Z6NiJJ",
 									"description": "undefined",
 									"type": "text"
 								}
@@ -11595,7 +11612,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files/download?path=repr",
+							"raw": "{{ziqniAdminApiBaseUrl}}/files/download?path=/Test_name-223645ab-cb7b-49da-9ad8-aed0eb870121/achievement-icons/Screenshot from 2022-03-15 14-22-55.png",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -11606,7 +11623,7 @@
 							"query": [
 								{
 									"key": "path",
-									"value": "repr",
+									"value": "/Test_name-223645ab-cb7b-49da-9ad8-aed0eb870121/achievement-icons/Screenshot from 2022-03-15 14-22-55.png",
 									"description": "The canonical path of the file to download"
 								}
 							]
@@ -11624,7 +11641,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files?id=eiusmod sed c&id=deserunt&permanent=true",
+							"raw": "{{ziqniAdminApiBaseUrl}}/files?permanent=true&id={{fileId0}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -11633,22 +11650,58 @@
 							],
 							"query": [
 								{
-									"key": "id",
-									"value": "eiusmod sed c",
-									"description": "The unique identifiers of the resources"
-								},
-								{
-									"key": "id",
-									"value": "deserunt",
-									"description": "The unique identifiers of the resources"
-								},
-								{
 									"key": "permanent",
 									"value": "true",
 									"description": "Permanently delete the file object. Default is false"
+								},
+								{
+									"key": "id",
+									"value": "{{fileId0}}"
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete file objects by query",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"name\",\n            \"queryValues\": [\n                \"{{fileName0}}\"\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/files/delete?id={{fileId0}}",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"files",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{fileId0}}"
+								}
+							]
+						},
+						"description": "Delete file objects by query"
 					},
 					"response": []
 				},
@@ -11697,54 +11750,6 @@
 							]
 						},
 						"description": "Copy an existing file object"
-					},
-					"response": []
-				},
-				{
-					"name": "NOT AVAILABLE IN CURRENT RELEASE",
-					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"mustNot\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"should\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"gte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"gt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"range\": [\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"sortBy\": [\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Desc\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Asc\"\n        }\n    ],\n    \"multiFields\": [\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"includeFields\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasNoValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"shouldMatch\": 10,\n    \"skip\": 5,\n    \"limit\": 23,\n    \"constraints\": [\n        \"some text\",\n        \"some text\"\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files/delete?id=eiusmod sed c&id=deserunt",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"files",
-								"delete"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "eiusmod sed c",
-									"description": "The unique identifiers of the resources"
-								},
-								{
-									"key": "id",
-									"value": "deserunt",
-									"description": "The unique identifiers of the resources"
-								}
-							]
-						},
-						"description": "Delete file objects by query"
 					},
 					"response": []
 				}
@@ -13500,7 +13505,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"name\",\n            \"queryValues\": [\n                \"{{productName0}}\"\n            ]\n        }\n    ],\n    \"hasNoValue\": [\n        \"tags\"\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": null,\n    \"mustNot\": null,\n    \"should\": null,\n    \"gte\": null,\n    \"gt\": null,\n    \"lte\": null,\n    \"lt\": null,\n    \"range\": null,\n    \"sortBy\": null,\n    \"multiFields\": [\n        {\n            \"queryFields\": [\n                \"id\",\n                \"spaceName\",\n                \"name\",\n                \"productRefId\",\n                \"description\",\n                \"adjustmentFactor\",\n                \"actionTypeAdjustmentFactors\",\n                \"metadata\",\n                \"tags\",\n                \"customFields\"\n            ],\n            \"queryValue\": \"bmct4H8BBjRG_vvgjb0V\"\n        }\n    ],\n    \"includeFields\": null,\n    \"hasValue\": null,\n    \"hasNoValue\": null,\n    \"shouldMatch\": null,\n    \"skip\": null,\n    \"limit\": null,\n    \"constraints\": null\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -13719,12 +13724,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/repositories",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-repositories",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"repositories"
+								"file-repositories"
 							]
 						},
 						"description": "Create a new file object repository in your Ziqni space"
