@@ -14586,7 +14586,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    }\n]",
+							"raw": "[\n    {\n        \"id\": \"FRxf0H8Bx_kUxIyMnTfw\",\n        \"rules\": {\n            \"entityId\": null,\n            \"action\": \"Test Action\",\n            \"context\": \"Test Context\",\n            \"rules\": {\n                \"type\": \"expression\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"Scope\",\n                \"operand\": \"Operand\",\n                \"operator\": \"Operator\",\n                \"value\": null,\n                \"rules\": null,\n                \"then\": null,\n                \"lineNumber\": 1\n            },\n            \"id\": null,\n            \"entityType\": null\n        }\n    },\n    {\n        \"id\": \"GBxg0H8Bx_kUxIyMJjfN\",\n        \"rules\": {\n            \"entityId\": null,\n            \"action\": \"Test Action\",\n            \"context\": \"Test Context\",\n            \"rules\": {\n                \"type\": \"expression\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"Scope\",\n                \"operand\": \"Operand\",\n                \"operator\": \"Operator\",\n                \"value\": null,\n                \"rules\": null,\n                \"then\": null,\n                \"lineNumber\": 1\n            },\n            \"id\": null,\n            \"entityType\": null\n        }\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -14615,7 +14615,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/rules/schema?context=Test Context",
+							"raw": "{{ziqniAdminApiBaseUrl}}/rules/schema?context=contest",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -14626,7 +14626,7 @@
 							"query": [
 								{
 									"key": "context",
-									"value": "Test Context",
+									"value": "contest",
 									"description": "(Required) The context to retrieve, either achievement, competition or contest"
 								}
 							]
@@ -14636,7 +14636,79 @@
 					"response": []
 				},
 				{
-					"name": "Lookup operands rules",
+					"name": "Get rules by query",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"id\",\n            \"queryValues\": [\n                \"{{ruleId1}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/rules/query",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"rules",
+								"query"
+							]
+						},
+						"description": "Retrieve Rules from Ziqni database by unique Rewards ID's or any other POST body parameters using the POST method"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete rules by query",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"id\",\n            \"queryValues\": [\n                \"{{ruleId0}}\"\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/rules/delete",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"rules",
+								"delete"
+							]
+						},
+						"description": "Delete Rules from Ziqni database by unique Rules ID's or any other POST body parameters using the POST method"
+					},
+					"response": []
+				},
+				{
+					"name": "NOT AVAILABLE IN CURRENT RELEASE",
 					"request": {
 						"auth": {
 							"type": "oauth2"
@@ -14668,78 +14740,6 @@
 							]
 						},
 						"description": "Search or get rule operand values"
-					},
-					"response": []
-				},
-				{
-					"name": "Get rules by query",
-					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"mustNot\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"should\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"gte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"gt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"range\": [\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"sortBy\": [\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Desc\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Asc\"\n        }\n    ],\n    \"multiFields\": [\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"includeFields\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasNoValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"shouldMatch\": 10,\n    \"skip\": 5,\n    \"limit\": 23,\n    \"constraints\": [\n        \"some text\",\n        \"some text\"\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/rules/query",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"rules",
-								"query"
-							]
-						},
-						"description": "Retrieve Rules from Ziqni database by unique Rewards ID's or any other POST body parameters using the POST method"
-					},
-					"response": []
-				},
-				{
-					"name": "NOT AVAILABLE IN CURRENT RELEASE",
-					"request": {
-						"auth": {
-							"type": "oauth2"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"mustNot\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"should\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValues\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"gte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"gt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lte\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"lt\": [\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"range\": [\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        },\n        {\n            \"queryField\": \"some text\",\n            \"gt\": \"some text\",\n            \"lt\": \"some text\",\n            \"constraints\": [\n                \"some text\",\n                \"some text\"\n            ]\n        }\n    ],\n    \"sortBy\": [\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Desc\"\n        },\n        {\n            \"queryField\": \"some text\",\n            \"order\": \"Asc\"\n        }\n    ],\n    \"multiFields\": [\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        },\n        {\n            \"queryFields\": [\n                \"some text\",\n                \"some text\"\n            ],\n            \"queryValue\": \"some text\"\n        }\n    ],\n    \"includeFields\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"hasNoValue\": [\n        \"some text\",\n        \"some text\"\n    ],\n    \"shouldMatch\": 10,\n    \"skip\": 5,\n    \"limit\": 23,\n    \"constraints\": [\n        \"some text\",\n        \"some text\"\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/rules/delete",
-							"host": [
-								"{{ziqniAdminApiBaseUrl}}"
-							],
-							"path": [
-								"rules",
-								"delete"
-							]
-						},
-						"description": "Delete Rules from Ziqni database by unique Rules ID's or any other POST body parameters using the POST method"
 					},
 					"response": []
 				}
