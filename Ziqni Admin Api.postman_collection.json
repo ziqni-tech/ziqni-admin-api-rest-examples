@@ -8608,7 +8608,7 @@
 			"name": "files",
 			"item": [
 				{
-					"name": "Create file object",
+					"name": "Create folder",
 					"event": [
 						{
 							"listen": "test",
@@ -8649,7 +8649,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":{\"6318a04e-6a13-490d-9aa6-f9b5cb8208e6\":\"51698300-ba75-4e7c-83ad-f3f8eed25ff6\"},\n    \"repositoryId\":\"-o2A5H8Bz1qQB8Z6NiJJ\",\n    \"name\":\"Test_name-40ca1eb2-f206-4aea-b2b1-d12f626c93e4\",\n    \"mimeType\":\"image/jpeg\",\n    \"parentFolderPath\":\"/files\",\n    \"constraints\":null\n    }",
+							"raw": "{\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":{\"6318a04e-6a13-490d-9aa6-f9b5cb8208e6\":\"51698300-ba75-4e7c-83ad-f3f8eed25ff6\"},\n    \"repositoryId\":\"{{repositoryId0}}\",\n    \"name\":\"Test_name-40ca1eb2-f206-4aea-b2b1-d12f626c93e4\",\n    \"mimeType\":\"image/jpeg\",\n    \"parentFolderPath\":\"/files\",\n    \"constraints\":null\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8657,12 +8657,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-objects",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"files"
+								"file-objects"
 							]
 						}
 					},
@@ -8677,12 +8677,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files?_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}&id={{fileId0}}&download=repr",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-objects?_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}&id={{fileId0}}&download=repr",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"files"
+								"file-objects"
 							],
 							"query": [
 								{
@@ -8751,12 +8751,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-objects",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"files"
+								"file-objects"
 							]
 						}
 					},
@@ -8777,7 +8777,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"name\",\n            \"queryValues\": [\n                \"{{fileName0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"mimeType\",\n            \"queryValues\": [\n                \"inode/directory\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8785,12 +8785,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files/query?id={{fileId0}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-objects/query?id={{fileId0}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"files",
+								"file-objects",
 								"query"
 							],
 							"query": [
@@ -8806,6 +8806,27 @@
 				},
 				{
 					"name": "Upload file",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse response",
+									"var responseJson = JSON.parse(responseBody);",
+									"",
+									"// get the length of results",
+									"var responseLength = responseJson.results.length;",
+									"for (i = 0; i < responseLength; i++) {",
+									"    // set the file id",
+									"    pm.collectionVariables.set(\"fileId\".concat([i]), responseJson.results[i].id);",
+									"    pm.collectionVariables.set(\"fileUploadExternalReference\".concat([i]), responseJson.results[i].externalReference);",
+									"",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "oauth2"
@@ -8852,23 +8873,23 @@
 									"contentType": "multipart/form-data",
 									"description": "undefined",
 									"type": "file",
-									"src": "/home/given/Pictures/Screenshot from 2022-03-15 14-22-55.png"
+									"src": "/home/given/Pictures/Screenshot from 2022-03-08 11-28-22.png"
 								},
 								{
 									"key": "repositoryId",
-									"value": "-o2A5H8Bz1qQB8Z6NiJJ",
+									"value": "{{repositoryId0}}",
 									"description": "undefined",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files/upload",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-objects/upload",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"files",
+								"file-objects",
 								"upload"
 							]
 						},
@@ -8885,18 +8906,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files/download?path=/Test_name-223645ab-cb7b-49da-9ad8-aed0eb870121/achievement-icons/Screenshot from 2022-03-15 14-22-55.png",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-objects/download?path={{fileUploadExternalReference0}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"files",
+								"file-objects",
 								"download"
 							],
 							"query": [
 								{
 									"key": "path",
-									"value": "/Test_name-223645ab-cb7b-49da-9ad8-aed0eb870121/achievement-icons/Screenshot from 2022-03-15 14-22-55.png",
+									"value": "{{fileUploadExternalReference0}}",
 									"description": "The canonical path of the file to download"
 								}
 							]
@@ -8914,22 +8935,22 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files?permanent=true&id={{fileId0}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-objects?id={{fileId0}}&permanent=true",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"files"
+								"file-objects"
 							],
 							"query": [
+								{
+									"key": "id",
+									"value": "{{fileId0}}"
+								},
 								{
 									"key": "permanent",
 									"value": "true",
 									"description": "Permanently delete the file object. Default is false"
-								},
-								{
-									"key": "id",
-									"value": "{{fileId0}}"
 								}
 							]
 						}
@@ -8959,12 +8980,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/files/delete?id={{fileId0}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-objects/delete?id={{fileId0}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"files",
+								"file-objects",
 								"delete"
 							],
 							"query": [
@@ -15312,6 +15333,10 @@
 		},
 		{
 			"key": "computeEngineId0",
+			"value": ""
+		},
+		{
+			"key": "fileUploadExternalReference0",
 			"value": ""
 		}
 	]
