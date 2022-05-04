@@ -1,8 +1,8 @@
 {
 	"info": {
 		"_postman_id": "3d731c53-0c75-49f5-9c99-f87c3ef57035",
-		"name": "Ziqni Admin Api",
-		"description": "```\nCopyright (c) 2022. ZIQNI LTD registered in England and Wales, company registration number-09693684\n```\n\nGamification done right for your business and customers.\n\nZiqni Admin Api Services are used to manage your Ziqni project, tournaments servers, missions, achievements and all other features offered by the platform.\n\nContact Support:  \nName: Support Team  \nEmail: [support@ziqni.com](mailto:support@ziqni.com)",
+		"name": "ZIQNI Admin Api - Gamification back-office",
+		"description": "```\nCopyright (c) 2022. ZIQNI LTD registered in England and Wales, company registration number-09693684\n```\n\nGamification done right for your business and customers.\nZIQNI Admin Api Services are used to manage your ZIQNI project, tournaments servers, missions, achievements and all other features offered by the platform.\nContact Support:\nName: Support Team\nEmail: support@ziqni.com\n\n\n",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
