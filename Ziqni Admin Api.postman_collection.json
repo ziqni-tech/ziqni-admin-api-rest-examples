@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "3d731c53-0c75-49f5-9c99-f87c3ef57035",
-		"name": "ZIQNI Admin Api - Gamification back-office",
+		"_postman_id": "5bd0bade-8862-4091-80e3-f8f419977366",
+		"name": "ZIQNI Admin Api - Gamification back-office Copy",
 		"description": "```\nCopyright (c) 2022. ZIQNI LTD registered in England and Wales, company registration number-09693684\n```\n\nGamification done right for your business and customers.\nZIQNI Admin Api Services are used to manage your ZIQNI project, tournaments servers, missions, achievements and all other features offered by the platform.\nContact Support:\nName: Support Team\nEmail: support@ziqni.com\n\n\n",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -4203,6 +4203,69 @@
 							],
 							"path": [
 								"competitions"
+							]
+						},
+						"description": "Create a new Competition in the Ziqni database"
+					},
+					"response": []
+				},
+				{
+					"name": "create Simple Competition",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// parse request",
+									"var requestJson = JSON.parse(request.data);",
+									"",
+									"// set the name variable",
+									"pm.collectionVariables.set(\"competitionName0\", requestJson.name);",
+									"",
+									"// parse response",
+									"var responseJson = JSON.parse(responseBody);",
+									"",
+									"// get the length of results",
+									"var responseLength = responseJson.results.length;",
+									"for (i = 0; i < responseLength; i++) {",
+									"    // set the competition id",
+									"    pm.collectionVariables.set(\"competitionId\".concat([i]), responseJson.results[i].id);",
+									"",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"competitionType\": \"Leaderboard\",\n    \"numberOfRounds\": 1,\n    \"numberOfGroupStages\": 0,\n    \"name\": \"Test competition\",\n    \"description\": \"Test Description\",\n    \"termsAndConditions\": \"test terms and conditions\",\n    \"entrantMemberType\": \"Individual\",\n    \"maxNumberOfEntrants\": 1000,\n    \"minNumberOfEntrants\": 1,\n    \"entrantMemberTagsFilter\": {\n        \"must\": [\n            \"{{tagKey0}}\"\n        ],\n        \"mustNot\": null,\n        \"should\": null,\n        \"shouldMatchAtLeast\": null\n    },\n    \"productTagsFilter\": {\n        \"must\": [\n            \"{{tagKey1}}\"\n        ],\n        \"mustNot\": null,\n        \"should\": null,\n        \"shouldMatchAtLeast\": null\n    },\n    \"productIds\": null,\n    \"rules\": [\n        {\n            \"entityId\": null,\n            \"action\": \"Test Action\",\n            \"context\": \"Test Context\",\n            \"rules\": {\n                \"type\": \"expression\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"Scope\",\n                \"operand\": \"Operand\",\n                \"operator\": \"Operator\",\n                \"value\": null,\n                \"rules\": null,\n                \"then\": null,\n                \"lineNumber\": 1\n            },\n            \"id\": null,\n            \"entityType\": null\n        }\n    ],\n    \"scheduledStartDate\": \"2022-03-24T13:22:16.68+02:00\",\n    \"scheduledEndDate\": \"2022-03-31T13:22:16.68+02:00\",\n    \"translations\": null,\n    \"contests\": {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": null,\n        \"name\": \"Contest 1\",\n        \"description\": \"For Competition\",\n        \"termsAndConditions\": null,\n        \"roundType\": \"TimeBound\",\n        \"maxNumberOfEntrants\": null,\n        \"minNumberOfEntrants\": null,\n        \"rules\": null,\n        \"scheduledStartDate\": null,\n        \"scheduledEndDate\": null,\n        \"strategies\": null,\n        \"constraints\": [],\n        \"translations\": null,\n        \"rewards\": [\n            {\n                \"customFields\": null,\n                \"tags\": null,\n                \"metadata\": null,\n                \"name\": \"Pfunguro\",\n                \"description\": \"Test_description\",\n                \"rewardRank\": \"1,2,3\",\n                \"rewardValue\": 0.06438600205843392,\n                \"icon\": null,\n                \"issueLimit\": null,\n                \"delay\": 100,\n                \"pointInTime\": null,\n                \"period\": 100,\n                \"translations\": null,\n                \"addConstraints\": [],\n                \"rewardTypeId\": \"iEKpu38BqB4XSXWDv6Pf\"\n            }\n        ]\n    },\n    \"rewards\": [\n        {\n            \"customFields\": null,\n            \"tags\": null,\n            \"metadata\": null,\n            \"name\": \"Pfunguro\",\n            \"description\": \"Test_description\",\n            \"rewardRank\": \"1,2,3\",\n            \"rewardValue\": 0.06438600205843392,\n            \"icon\": null,\n            \"issueLimit\": null,\n            \"delay\": 100,\n            \"pointInTime\": null,\n            \"period\": 100,\n            \"translations\": null,\n            \"addConstraints\": [],\n            \"rewardTypeId\": \"iEKpu38BqB4XSXWDv6Pf\"\n        }\n    ],\n    \"constraints\": [\n        \"optinRequiredForEntrants\"\n    ],\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"c8786add-3775-4022-939e-bdc63d5ae8f2\": \"b68d9232-fef7-4c80-a8eb-a01ab1f30748\"\n    },\n    \"strategies\": {\n        \"strategyType\": \"FirstTo\",\n        \"rankingStrategy\": {\n            \"constraints\": [\n                \"test_constraints\"\n            ]\n        },\n        \"scoringStrategy\": {\n            \"limitUpdatesTo\": 400,\n            \"sumBestXOf\": 100,\n            \"lastUpdateTimeStamp\": 100,\n            \"recordTimeWhenSumReaches\": 300.0\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/competitions/simple",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"competitions",
+								"simple"
 							]
 						},
 						"description": "Create a new Competition in the Ziqni database"
@@ -13160,7 +13223,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"Test_name-071e4a59-6f07-4085-b1bb-9c6239f8148c12\",\n        \"key\": \"Test_key-deef82e9-b34f-4636-a614-92fa3807ecwyetriu\",\n        \"description\": \"Test Description\",\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n        },\n        \"entityTypes\": [\n            \"Member\"\n        ]\n    },\n    {\n        \"name\": \"Test_name-071e4a59-6f07-4085-b1bb-9c6239f8354\",\n        \"key\": \"Test_key-deef82e9-b34f-4636-a614-92fa3807ecsgdhfdhg\",\n        \"description\": \"Test Description\",\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n        },\n        \"entityTypes\": [\n            \"Product\"\n        ]\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"Test_name-071e4a59-6f07-4085-b1bb-9c6239f8148c12\",\n        \"key\": \"Test_key-deef82e9-b34f-4636-a614-92fa3807ecwyetriufdgf\",\n        \"description\": \"Test Description\",\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n        },\n        \"entityTypes\": [\n            \"Member\"\n        ]\n    },\n    {\n        \"name\": \"Test_name-071e4a59-6f07-4085-b1bb-9c6239f8354\",\n        \"key\": \"Test_key-deef82e9-b34f-4636-a614-92fa3807ecsgdhfdhgfdhh\",\n        \"description\": \"Test Description\",\n        \"metadata\": {\n            \"MetaKey\": \"MetaValue\"\n        },\n        \"entityTypes\": [\n            \"Product\"\n        ]\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
