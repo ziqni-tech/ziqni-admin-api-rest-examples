@@ -15,13 +15,13 @@
 		},
 		{
 			"key": "ziqniAdminApiAuthUrl",
-			"value": "https://identity.ziqni.com/auth/realms/ziqni/protocol/openid-connect/auth",
+			"value": "https://identity.ziqni.com/realms/ziqni/protocol/openid-connect/auth",
 			"type": "default",
 			"enabled": true
 		},
 		{
 			"key": "ziqniAdminApiAccessTokenUrl",
-			"value": "https://identity.ziqni.com/auth/realms/ziqni/protocol/openid-connect/token",
+			"value": "https://identity.ziqni.com/realms/ziqni/protocol/openid-connect/token",
 			"type": "default",
 			"enabled": true
 		},
