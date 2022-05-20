@@ -2689,6 +2689,29 @@
 					"response": []
 				},
 				{
+					"name": "get Achievements To Clone",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/achievements/{{achievementId0}}/clone",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"achievements",
+								"{{achievementId0}}",
+								"clone"
+							]
+						},
+						"description": "Returns a list of Competitions. This assumes that competitions have first been uploaded via a POST request or web console"
+					},
+					"response": []
+				},
+				{
 					"name": "update Achievements",
 					"request": {
 						"auth": {
@@ -4189,7 +4212,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"competitionType\": \"Leaderboard\",\n    \"numberOfRounds\": 1,\n    \"numberOfGroupStages\": 0,\n    \"name\": \"Test competition\",\n    \"description\": \"Test Description\",\n    \"termsAndConditions\": \"test terms and conditions\",\n    \"entrantMemberType\": \"Individual\",\n    \"maxNumberOfEntrants\": 1000,\n    \"minNumberOfEntrants\": 1,\n    \"entrantMemberTagsFilter\": {\n        \"must\":[\"{{tagKey0}}\"],\n        \"mustNot\":null,\n        \"should\":null,\n        \"shouldMatchAtLeast\":null\n    },\n    \"productTagsFilter\":{\n        \"must\":[\"{{tagKey1}}\"],\n        \"mustNot\":null,\n        \"should\":null,\n        \"shouldMatchAtLeast\":null\n    },\n    \"productIds\": null,\n    \"rules\": [{\n        \"entityId\": null,\n        \"action\": \"Test Action\",\n        \"context\": \"Test Context\",\n        \"rules\": {\n            \"type\": \"expression\",\n            \"mustMatchAll\": true,\n            \"mustEvaluateTo\": true,\n            \"scope\": \"Scope\",\n            \"operand\": \"Operand\",\n            \"operator\": \"Operator\",\n            \"value\": null,\n            \"rules\": null,\n            \"then\": null,\n            \"lineNumber\": 1\n        },\n        \"id\": null,\n        \"entityType\": null\n    }],\n    \"scheduledStartDate\": \"2022-03-24T13:22:16.68+02:00\",\n    \"scheduledEndDate\": \"2022-03-31T13:22:16.68+02:00\",\n    \"translations\": null,\n    \"contests\": {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": null,\n        \"name\": \"Contest 1\",\n        \"description\": \"For Competition\",\n        \"termsAndConditions\": null,\n        \"roundType\": \"TimeBound\",\n        \"maxNumberOfEntrants\": null,\n        \"minNumberOfEntrants\": null,\n        \"rules\": null,\n        \"scheduledStartDate\": null,\n        \"scheduledEndDate\": null,\n        \"strategies\": null,\n        \"constraints\": [],\n        \"translations\": null,\n        \"rewards\": [{\n            \"customFields\": null,\n            \"tags\": null,\n            \"metadata\": null,\n            \"name\": \"Pfunguro\",\n            \"description\": \"Test_description\",\n            \"rewardRank\": \"1,2,3\",\n            \"rewardValue\": 0.06438600205843392,\n            \"icon\": null,\n            \"issueLimit\": null,\n            \"delay\": 100,\n            \"pointInTime\": null,\n            \"period\": 100,\n            \"translations\": null,\n            \"addConstraints\": [],\n            \"rewardTypeId\": \"iEKpu38BqB4XSXWDv6Pf\"\n        }]\n    },\n    \"rewards\": [{\n            \"customFields\": null,\n            \"tags\": null,\n            \"metadata\": null,\n            \"name\": \"Pfunguro\",\n            \"description\": \"Test_description\",\n            \"rewardRank\": \"1,2,3\",\n            \"rewardValue\": 0.06438600205843392,\n            \"icon\": null,\n            \"issueLimit\": null,\n            \"delay\": 100,\n            \"pointInTime\": null,\n            \"period\": 100,\n            \"translations\": null,\n            \"addConstraints\": [],\n            \"rewardTypeId\": \"iEKpu38BqB4XSXWDv6Pf\"\n        }],\n    \"constraints\": [\"optinRequiredForEntrants\"],\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"c8786add-3775-4022-939e-bdc63d5ae8f2\":\"b68d9232-fef7-4c80-a8eb-a01ab1f30748\"\n        }\n}",
+							"raw": "{\n    \"competitionType\": \"Leaderboard\",\n    \"numberOfRounds\": 1,\n    \"numberOfGroupStages\": 0,\n    \"name\": \"Test competition\",\n    \"description\": \"Test Description\",\n    \"termsAndConditions\": \"test terms and conditions\",\n    \"entrantMemberType\": \"Individual\",\n    \"maxNumberOfEntrants\": 1000,\n    \"minNumberOfEntrants\": 1,\n    \"entrantMemberTagsFilter\": {\n        \"must\": [\n            \"{{tagKey0}}\"\n        ],\n        \"mustNot\": null,\n        \"should\": null,\n        \"shouldMatchAtLeast\": null\n    },\n    \"productTagsFilter\": {\n        \"must\": [\n            \"{{tagKey1}}\"\n        ],\n        \"mustNot\": null,\n        \"should\": null,\n        \"shouldMatchAtLeast\": null\n    },\n    \"productIds\": null,\n    \"rules\": [\n        {\n            \"entityId\": null,\n            \"action\": \"Test Action\",\n            \"context\": \"Test Context\",\n            \"rules\": {\n                \"type\": \"expression\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"Scope\",\n                \"operand\": \"Operand\",\n                \"operator\": \"Operator\",\n                \"value\": null,\n                \"rules\": null,\n                \"then\": null,\n                \"lineNumber\": 1\n            },\n            \"id\": null,\n            \"entityType\": null\n        }\n    ],\n    \"scheduledStartDate\": \"2022-03-24T13:22:16.68+02:00\",\n    \"scheduledEndDate\": \"2022-03-31T13:22:16.68+02:00\",\n    \"translations\": null,\n    \"contests\": {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"df3a7be2-1e2d-403f-b0ba-f84bdfe7e409\": \"f05baa4f-f7e0-45f9-9633-d0b4d7250201\"\n        },\n        \"row\": null,\n        \"round\": 2,\n        \"groupStage\": null,\n        \"groupStageLabel\": null,\n        \"entrantsFromContest\": null,\n        \"name\": \"Test Group Stage Label\",\n        \"description\": \"Test Description\",\n        \"termsAndConditions\": \"Test Terms and Conditions\",\n        \"roundType\": \"TimeBound\",\n        \"maxNumberOfEntrants\": 100,\n        \"minNumberOfEntrants\": 20,\n        \"rules\": [\n            {\n                \"entityId\": null,\n                \"action\": \"Test Action\",\n                \"context\": \"Test Context\",\n                \"rules\": {\n                    \"type\": \"expression\",\n                    \"mustMatchAll\": true,\n                    \"mustEvaluateTo\": true,\n                    \"scope\": \"Scope\",\n                    \"operand\": \"Operand\",\n                    \"operator\": \"Operator\",\n                    \"value\": null,\n                    \"rules\": null,\n                    \"then\": null,\n                    \"lineNumber\": 1\n                },\n                \"id\": null,\n                \"entityType\": null\n            }\n        ],\n        \"scheduledStartDate\": \"2022-03-28T16:31:08.731+02:00\",\n        \"scheduledEndDate\": \"2022-03-29T16:31:08.731+02:00\",\n        \"strategies\": {\n            \"strategyType\": \"FirstTo\",\n            \"rankingStrategy\": {\n                \"constraints\": [\n                    \"test_constraints\"\n                ]\n            },\n            \"scoringStrategy\": {\n                \"limitUpdatesTo\": 400,\n                \"sumBestXOf\": 100,\n                \"lastUpdateTimeStamp\": 100,\n                \"recordTimeWhenSumReaches\": 300.0\n            }\n        },\n        \"translations\": [\n            {\n                \"id\": null,\n                \"accountId\": null,\n                \"entityId\": null,\n                \"entityType\": null,\n                \"version\": null,\n                \"created\": null,\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Given\"\n                    }\n                ],\n                \"languageKey\": \"fit\"\n            }\n        ],\n        \"rewards\": [\n            {\n                \"customFields\": null,\n                \"tags\": null,\n                \"metadata\": null,\n                \"name\": \"Given Pfunguro\",\n                \"description\": \"Test_description\",\n                \"rewardRank\": \"1,2,3,4-10\",\n                \"rewardValue\": 0.33405660734854725,\n                \"icon\": null,\n                \"issueLimit\": null,\n                \"delay\": 100,\n                \"pointInTime\": null,\n                \"period\": 100,\n                \"translations\": null,\n                \"addConstraints\": [],\n                \"rewardTypeId\": \"-sHw0H8BVp8Gz4wlE9p9\"\n            }\n        ],\n        \"constraints\": []\n    },\n    \"rewards\": [\n        {\n            \"customFields\": null,\n            \"tags\": null,\n            \"metadata\": null,\n            \"name\": \"Pfunguro\",\n            \"description\": \"Test_description\",\n            \"rewardRank\": \"1,2,3\",\n            \"rewardValue\": 0.06438600205843392,\n            \"icon\": null,\n            \"issueLimit\": null,\n            \"delay\": 100,\n            \"pointInTime\": null,\n            \"period\": 100,\n            \"translations\": null,\n            \"addConstraints\": [],\n            \"rewardTypeId\": \"iEKpu38BqB4XSXWDv6Pf\"\n        }\n    ],\n    \"constraints\": [\n        \"optinRequiredForEntrants\"\n    ],\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"c8786add-3775-4022-939e-bdc63d5ae8f2\": \"b68d9232-fef7-4c80-a8eb-a01ab1f30748\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4303,6 +4326,29 @@
 									"value": "{{ziqniDefaultSkip}}",
 									"description": "Skip the returned records found and return the next batch of records"
 								}
+							]
+						},
+						"description": "Returns a list of Competitions. This assumes that competitions have first been uploaded via a POST request or web console"
+					},
+					"response": []
+				},
+				{
+					"name": "get Competitions To Clone",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/competitions/{{competitionId0}}/clone",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"competitions",
+								"{{competitionId0}}",
+								"clone"
 							]
 						},
 						"description": "Returns a list of Competitions. This assumes that competitions have first been uploaded via a POST request or web console"
@@ -8097,7 +8143,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":{\n        \"df3a7be2-1e2d-403f-b0ba-f84bdfe7e409\":\"f05baa4f-f7e0-45f9-9633-d0b4d7250201\"\n        },\n    \"competitionId\":\"9MHv0H8BVp8Gz4wl9dqm\",\n    \"row\":null,\n    \"round\":2,\n    \"groupStage\":null,\n    \"groupStageLabel\":null,\n    \"entrantsFromContest\":null,\n    \"name\":\"Test Group Stage Label\",\n    \"description\":\"Test Description\",\n    \"termsAndConditions\":\"Test Terms and Conditions\",\n    \"roundType\":\"TimeBound\",\n    \"maxNumberOfEntrants\":100,\n    \"minNumberOfEntrants\":20,\n    \"rules\":[{\n        \"entityId\":null,\n        \"action\":\"Test Action\",\n        \"context\":\"Test Context\",\n        \"rules\":\n        {\n            \"type\":\"expression\",\n            \"mustMatchAll\":true,\n            \"mustEvaluateTo\":true,\n            \"scope\":\"Scope\",\n            \"operand\":\"Operand\",\n            \"operator\":\"Operator\",\n            \"value\":null,\n            \"rules\":null,\n            \"then\":null,\n            \"lineNumber\":1\n            },\n            \"id\":null,\n            \"entityType\":null\n            }],\n            \"scheduledStartDate\":\"2022-03-28T16:31:08.731+02:00\",\n            \"scheduledEndDate\":\"2022-03-29T16:31:08.731+02:00\",\n            \"strategies\":\n            {\n                \"strategyType\":\"FirstTo\",\n                \"rankingStrategy\":\n                {\n                    \"constraints\":[\"test_constraints\"]\n                    },\n                    \"scoringStrategy\":\n                    {\n                        \"limitUpdatesTo\":400,\n                        \"sumBestXOf\":100,\n                        \"lastUpdateTimeStamp\":100,\n                        \"recordTimeWhenSumReaches\":300.0\n                        }\n                        },\n                        \"translations\":\n                        [{\n                            \"id\":null,\n                            \"accountId\":null,\n                            \"entityId\":null,\n                            \"entityType\":null,\n                            \"version\":null,\n                            \"created\":null,\n                            \"translations\":[{\"fieldName\":\"name\",\"text\":\"Given\"}],\n                                \"languageKey\":\"fit\"\n                                }],\n                                \"rewards\":[{\n                                    \"customFields\":null,\n                                    \"tags\":null,\n                                    \"metadata\":null,\n                                    \"name\":\"Given Pfunguro\",\n                                    \"description\":\"Test_description\",\n                                    \"rewardRank\":\"1,2,3,4-10\",\n                                    \"rewardValue\":0.33405660734854725,\n                                    \"icon\":null,\n                                    \"issueLimit\":null,\n                                    \"delay\":100,\n                                    \"pointInTime\":null,\n                                    \"period\":100,\n                                    \"translations\":null,\n                                    \"addConstraints\":[],\n                                    \"rewardTypeId\":\"-sHw0H8BVp8Gz4wlE9p9\"\n                                    }],\n                                    \"constraints\":[]\n                                    }",
+							"raw": "{\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"df3a7be2-1e2d-403f-b0ba-f84bdfe7e409\": \"f05baa4f-f7e0-45f9-9633-d0b4d7250201\"\n    },\n    \"competitionId\": \"9MHv0H8BVp8Gz4wl9dqm\",\n    \"row\": null,\n    \"round\": 2,\n    \"groupStage\": null,\n    \"groupStageLabel\": null,\n    \"entrantsFromContest\": null,\n    \"name\": \"Test Group Stage Label\",\n    \"description\": \"Test Description\",\n    \"termsAndConditions\": \"Test Terms and Conditions\",\n    \"roundType\": \"TimeBound\",\n    \"maxNumberOfEntrants\": 100,\n    \"minNumberOfEntrants\": 20,\n    \"rules\": [\n        {\n            \"entityId\": null,\n            \"action\": \"Test Action\",\n            \"context\": \"Test Context\",\n            \"rules\": {\n                \"type\": \"expression\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"Scope\",\n                \"operand\": \"Operand\",\n                \"operator\": \"Operator\",\n                \"value\": null,\n                \"rules\": null,\n                \"then\": null,\n                \"lineNumber\": 1\n            },\n            \"id\": null,\n            \"entityType\": null\n        }\n    ],\n    \"scheduledStartDate\": \"2022-03-28T16:31:08.731+02:00\",\n    \"scheduledEndDate\": \"2022-03-29T16:31:08.731+02:00\",\n    \"strategies\": {\n        \"strategyType\": \"FirstTo\",\n        \"rankingStrategy\": {\n            \"constraints\": [\n                \"test_constraints\"\n            ]\n        },\n        \"scoringStrategy\": {\n            \"limitUpdatesTo\": 400,\n            \"sumBestXOf\": 100,\n            \"lastUpdateTimeStamp\": 100,\n            \"recordTimeWhenSumReaches\": 300.0\n        }\n    },\n    \"translations\": [\n        {\n            \"id\": null,\n            \"accountId\": null,\n            \"entityId\": null,\n            \"entityType\": null,\n            \"version\": null,\n            \"created\": null,\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"Given\"\n                }\n            ],\n            \"languageKey\": \"fit\"\n        }\n    ],\n    \"rewards\": [\n        {\n            \"customFields\": null,\n            \"tags\": null,\n            \"metadata\": null,\n            \"name\": \"Given Pfunguro\",\n            \"description\": \"Test_description\",\n            \"rewardRank\": \"1,2,3,4-10\",\n            \"rewardValue\": 0.33405660734854725,\n            \"icon\": null,\n            \"issueLimit\": null,\n            \"delay\": 100,\n            \"pointInTime\": null,\n            \"period\": 100,\n            \"translations\": null,\n            \"addConstraints\": [],\n            \"rewardTypeId\": \"-sHw0H8BVp8Gz4wlE9p9\"\n        }\n    ],\n    \"constraints\": []\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8140,17 +8186,38 @@
 								},
 								{
 									"key": "_limit",
-									"value": "{{ziqniDefaultLimit}}",
-									"description": "Limit the returned total records found"
+									"value": "{{ziqniDefaultLimit}}"
 								},
 								{
 									"key": "_skip",
-									"value": "{{ziqniDefaultSkip}}",
-									"description": "Skip the returned records found and return the next batch of records"
+									"value": "{{ziqniDefaultSkip}}"
 								}
 							]
 						},
 						"description": "Returns a list of Contests. This assumes that contests have first been uploaded via a POST request or web console"
+					},
+					"response": []
+				},
+				{
+					"name": "get Contests To Clone",
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ziqniAdminApiBaseUrl}}/contests/{{contestId0}}/clone",
+							"host": [
+								"{{ziqniAdminApiBaseUrl}}"
+							],
+							"path": [
+								"contests",
+								"{{contestId0}}",
+								"clone"
+							]
+						},
+						"description": "Returns a list of Competitions. This assumes that competitions have first been uploaded via a POST request or web console"
 					},
 					"response": []
 				},
@@ -8204,7 +8271,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"id\",\n            \"queryValues\": [\n                \"{{contestId0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
+							"raw": "{\n    \"must\": [\n        {\n            \"queryField\": \"competitionId\",\n            \"queryValues\": [\n                \"{{competitionId0}}\"\n            ]\n        }\n    ],\n    \"skip\": 0,\n    \"limit\": 20\n}",
 							"options": {
 								"raw": {
 									"language": "json"
