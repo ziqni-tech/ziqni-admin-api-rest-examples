@@ -3,7 +3,8 @@
 		"_postman_id": "5bd0bade-8862-4091-80e3-f8f419977366",
 		"name": "ZIQNI Admin Api - Gamification back-office Copy",
 		"description": "```\nCopyright (c) 2022. ZIQNI LTD registered in England and Wales, company registration number-09693684\n```\n\nGamification done right for your business and customers.\nZIQNI Admin Api Services are used to manage your ZIQNI project, tournaments servers, missions, achievements and all other features offered by the platform.\nContact Support:\nName: Support Team\nEmail: support@ziqni.com\n\n\n",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11028340"
 	},
 	"item": [
 		{
@@ -2631,7 +2632,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"79bb9d39-8cf8-4736-815d-e07279bcf8b8\": \"0bc3f0e7-bef9-439e-80ce-6e7b54d983aa\"\n        },\n        \"name\": \"Test_name-f7925160-807d-4cd1-8571-a8289f56eb70\",\n        \"description\": \"test description\",\n        \"termsAndConditions\": \"test terms and conditions\",\n        \"icon\": null,\n        \"rules\": [\n            {\n                \"entityId\": null,\n                \"action\": \"Test Action\",\n                \"context\": \"Test Context\",\n                \"rules\": {\n                    \"type\": \"expression\",\n                    \"mustMatchAll\": true,\n                    \"mustEvaluateTo\": true,\n                    \"scope\": \"Scope\",\n                    \"operand\": \"Operand\",\n                    \"operator\": \"Operator\",\n                    \"value\": null,\n                    \"rules\": null,\n                    \"then\": null,\n                    \"lineNumber\": 1\n                },\n                \"id\": null,\n                \"entityType\": null\n            }\n        ],\n        \"achievementDependencies\": {\n            \"must\": [\"38Gs0H8BVp8Gz4wlXNq5\"],\n            \"mustNot\": [],\n            \"should\": [],\n            \"shouldMatchAtLeast\": 0\n        },\n        \"memberTagsFilter\": {\n            \"must\": null,\n            \"mustNot\": null,\n            \"should\": [\n                \"{{tagKey0}}\"\n            ],\n            \"shouldMatchAtLeast\": 0\n        },\n        \"scheduling\": {\n            \"scheduleType\": \"Once\",\n            \"scheduleOccurrencesLimit\": 1,\n            \"every\": [],\n            \"startDate\": \"2022-03-28T15:17:11.893+02:00\",\n            \"endDate\": \"2022-04-28T15:17:11.893+02:00\",\n            \"constraints\": [\n                \"onlyAggregateOnActiveDays\"\n            ]\n        },\n        \"maxNumberOfIssues\": 3,\n        \"translations\": null,\n        \"rewards\": [\n            {\n                \"customFields\": null,\n                \"tags\": null,\n                \"metadata\": null,\n                \"name\": \"Given Pfunguro\",\n                \"description\": \"Test_description\",\n                \"rewardRank\": \"1,2,3,4-10\",\n                \"rewardValue\": 0.10758983118804344,\n                \"icon\": null,\n                \"issueLimit\": null,\n                \"delay\": 100,\n                \"pointInTime\": null,\n                \"period\": 100,\n                \"translations\": null,\n                \"addConstraints\": [],\n                \"rewardTypeId\": \"28Gs0H8BVp8Gz4wlN9oO\"\n            }\n        ],\n        \"constraints\": [\n            \"initialState\",\n            \"memberAcknowledgmentRequired\"\n        ]\n    },\n    {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"79bb9d39-8cf8-4736-815d-e07279bcf8b8\": \"0bc3f0e7-bef9-439e-80ce-6e7b54d983aa\"\n        },\n        \"name\": \"Test_name-2\",\n        \"description\": \"test description 2\",\n        \"termsAndConditions\": \"test terms and conditions\",\n        \"icon\": null,\n        \"rules\": [\n            {\n                \"entityId\": null,\n                \"action\": \"Test Action\",\n                \"context\": \"Test Context\",\n                \"rules\": {\n                    \"type\": \"expression\",\n                    \"mustMatchAll\": true,\n                    \"mustEvaluateTo\": true,\n                    \"scope\": \"Scope\",\n                    \"operand\": \"Operand\",\n                    \"operator\": \"Operator\",\n                    \"value\": null,\n                    \"rules\": null,\n                    \"then\": null,\n                    \"lineNumber\": 1\n                },\n                \"id\": null,\n                \"entityType\": null\n            }\n        ],\n        \"achievementDependencies\": {\n            \"must\": [\"38Gs0H8BVp8Gz4wlXNq5\"],\n            \"mustNot\": [],\n            \"should\": [],\n            \"shouldMatchAtLeast\": 0\n        },\n        \"memberTagsFilter\": {\n            \"must\": null,\n            \"mustNot\": null,\n            \"should\": [\n                \"{{tagKey0}}\"\n            ],\n            \"shouldMatchAtLeast\": 0\n        },\n        \"scheduling\": {\n            \"scheduleType\": \"Once\",\n            \"scheduleOccurrencesLimit\": 1,\n            \"every\": [],\n            \"startDate\": \"2022-03-28T15:17:11.893+02:00\",\n            \"endDate\": \"2022-04-28T15:17:11.893+02:00\",\n            \"constraints\": [\n                \"onlyAggregateOnActiveDays\"\n            ]\n        },\n        \"maxNumberOfIssues\": 3,\n        \"translations\": null,\n        \"rewards\": [\n            {\n                \"customFields\": null,\n                \"tags\": null,\n                \"metadata\": null,\n                \"name\": \"Given Pfunguro 1\",\n                \"description\": \"Test_description 1\",\n                \"rewardRank\": \"1,2,3,4-10\",\n                \"rewardValue\": 0.10758983118804344,\n                \"icon\": null,\n                \"issueLimit\": null,\n                \"delay\": 100,\n                \"pointInTime\": null,\n                \"period\": 100,\n                \"translations\": null,\n                \"addConstraints\": [],\n                \"rewardTypeId\": \"28Gs0H8BVp8Gz4wlN9oO\"\n            }\n        ],\n        \"constraints\": [\n            \"initialState\",\n            \"memberAcknowledgmentRequired\"\n        ]\n    }\n]",
+							"raw": "[\n    {\n        \"customFields\": {\n            \"custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"79bb9d39-8cf8-4736-815d-e07279bcf8b8\": \"0bc3f0e7-bef9-439e-80ce-6e7b54d983aa\"\n        },\n        \"name\": \"Test_name-f7925160-807d-4cd1-8571-a8289f56eb70\",\n        \"description\": \"test description\",\n        \"termsAndConditions\": \"test terms and conditions\",\n        \"icon\": null,\n        \"rules\": [\n            {\n                \"entityId\": null,\n                \"action\": \"Test Action\",\n                \"context\": \"Test Context\",\n                \"rules\": {\n                    \"type\": \"expression\",\n                    \"mustMatchAll\": true,\n                    \"mustEvaluateTo\": true,\n                    \"scope\": \"Scope\",\n                    \"operand\": \"Operand\",\n                    \"operator\": \"Operator\",\n                    \"value\": null,\n                    \"rules\": null,\n                    \"then\": null,\n                    \"lineNumber\": 1\n                },\n                \"id\": null,\n                \"entityType\": null\n            }\n        ],\n        \"achievementDependencies\": {\n            \"must\": [\n                \"38Gs0H8BVp8Gz4wlXNq5\"\n            ],\n            \"mustNot\": [],\n            \"should\": [],\n            \"shouldMatchAtLeast\": 0\n        },\n        \"memberTagsFilter\": {\n            \"must\": null,\n            \"mustNot\": null,\n            \"should\": [\n                \"{{tagKey0}}\"\n            ],\n            \"shouldMatchAtLeast\": 0\n        },\n        \"scheduling\": {\n            \"scheduleType\": \"Once\",\n            \"scheduleOccurrencesLimit\": 1,\n            \"every\": [],\n            \"startDate\": \"2022-03-28T15:17:11.893+02:00\",\n            \"endDate\": \"2022-04-28T15:17:11.893+02:00\",\n            \"constraints\": [\n                \"onlyAggregateOnActiveDays\"\n            ]\n        },\n        \"maxNumberOfIssues\": 3,\n        \"translations\": null,\n        \"rewards\": [\n            {\n                \"customFields\": null,\n                \"tags\": null,\n                \"metadata\": null,\n                \"name\": \"Given Pfunguro\",\n                \"description\": \"Test_description\",\n                \"rewardRank\": \"1,2,3,4-10\",\n                \"rewardValue\": 0.10758983118804344,\n                \"icon\": null,\n                \"issueLimit\": null,\n                \"delay\": 100,\n                \"pointInTime\": null,\n                \"period\": 100,\n                \"translations\": null,\n                \"addConstraints\": [],\n                \"rewardTypeId\": \"28Gs0H8BVp8Gz4wlN9oO\"\n            }\n        ],\n        \"constraints\": [\n            \"initialState\",\n            \"memberAcknowledgmentRequired\"\n        ]\n    },\n    {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"79bb9d39-8cf8-4736-815d-e07279bcf8b8\": \"0bc3f0e7-bef9-439e-80ce-6e7b54d983aa\"\n        },\n        \"name\": \"Test_name-2\",\n        \"description\": \"test description 2\",\n        \"termsAndConditions\": \"test terms and conditions\",\n        \"icon\": null,\n        \"rules\": [\n            {\n                \"entityId\": null,\n                \"action\": \"Test Action\",\n                \"context\": \"Test Context\",\n                \"rules\": {\n                    \"type\": \"expression\",\n                    \"mustMatchAll\": true,\n                    \"mustEvaluateTo\": true,\n                    \"scope\": \"Scope\",\n                    \"operand\": \"Operand\",\n                    \"operator\": \"Operator\",\n                    \"value\": null,\n                    \"rules\": null,\n                    \"then\": null,\n                    \"lineNumber\": 1\n                },\n                \"id\": null,\n                \"entityType\": null\n            }\n        ],\n        \"achievementDependencies\": {\n            \"must\": [\n                \"38Gs0H8BVp8Gz4wlXNq5\"\n            ],\n            \"mustNot\": [],\n            \"should\": [],\n            \"shouldMatchAtLeast\": 0\n        },\n        \"memberTagsFilter\": {\n            \"must\": null,\n            \"mustNot\": null,\n            \"should\": [\n                \"{{tagKey0}}\"\n            ],\n            \"shouldMatchAtLeast\": 0\n        },\n        \"scheduling\": {\n            \"scheduleType\": \"Once\",\n            \"scheduleOccurrencesLimit\": 1,\n            \"every\": [],\n            \"startDate\": \"2022-03-28T15:17:11.893+02:00\",\n            \"endDate\": \"2022-04-28T15:17:11.893+02:00\",\n            \"constraints\": [\n                \"onlyAggregateOnActiveDays\"\n            ]\n        },\n        \"maxNumberOfIssues\": 3,\n        \"translations\": null,\n        \"rewards\": [\n            {\n                \"customFields\": null,\n                \"tags\": null,\n                \"metadata\": null,\n                \"name\": \"Given Pfunguro 1\",\n                \"description\": \"Test_description 1\",\n                \"rewardRank\": \"1,2,3,4-10\",\n                \"rewardValue\": 0.10758983118804344,\n                \"icon\": null,\n                \"issueLimit\": null,\n                \"delay\": 100,\n                \"pointInTime\": null,\n                \"period\": 100,\n                \"translations\": null,\n                \"addConstraints\": [],\n                \"rewardTypeId\": \"28Gs0H8BVp8Gz4wlN9oO\"\n            }\n        ],\n        \"constraints\": [\n            \"initialState\",\n            \"memberAcknowledgmentRequired\"\n        ]\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2967,7 +2968,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n   {\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"b361f6ddb5cb\":\"MetaValue\"\n        },\n    \"name\": \"Test_name-332452b4-c047-45fe-adfc-b31164376879\",\n    \"key\": \"Test_key-b3eae4e7-3890-47a1-aaf0-2111a420f456\",\n    \"description\": \"Test Description 0\",\n    \"unitOfMeasureType\": \"Other\",\n    \"addConstraints\": []\n},\n{\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"b361f6dd18f882251757\":\"MetaValue\"\n        },\n    \"name\": \"Test_name-332452b4-c047-45fe-adfc-b311321014c7\",\n    \"key\": \"Test_key-b3eae4e7-3890-47a1-aaf0-2111a420gh63656\",\n    \"description\": \"Test Description 1\",\n    \"unitOfMeasureType\": \"Other\",\n    \"addConstraints\": []\n}\n]",
+							"raw": "[\n    {\n        \"customFields\": {\n            \"custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"b361f6ddb5cb\": \"MetaValue\"\n        },\n        \"name\": \"Test_name-332452b4-c047-45fe-adfc-b31164376879\",\n        \"key\": \"Test_key-b3eae4e7-3890-47a1-aaf0-2111a420f4562342\",\n        \"description\": \"Test Description 0\",\n        \"unitOfMeasureType\": \"Other\",\n        \"addConstraints\": []\n    },\n    {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"b361f6dd18f882251757\": \"MetaValue\"\n        },\n        \"name\": \"Test_name-332452b4-c047-45fe-adfc-b311321014c7\",\n        \"key\": \"Test_key-b3eae4e7-3890-47a1-aaf0-2111a420gh6365613221\",\n        \"description\": \"Test Description 1\",\n        \"unitOfMeasureType\": \"Other\",\n        \"addConstraints\": []\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3032,7 +3033,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/action-types?_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/action-types?id={{actionTypeId0}},{{actionTypeId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -3041,9 +3042,12 @@
 							],
 							"query": [
 								{
+									"key": "id",
+									"value": "{{actionTypeId0}},{{actionTypeId1}}"
+								},
+								{
 									"key": "_limit",
-									"value": "{{ziqniDefaultLimit}}",
-									"description": "Limit the returned total records found"
+									"value": "{{ziqniDefaultLimit}}"
 								},
 								{
 									"key": "_skip",
@@ -3102,7 +3106,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n    \"id\":\"{{actionTypeId0}}\",\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n        },\n    \"name\": \"Test_name-332452b4-c047-45fe-adfc-b311321014c7\",\n    \"description\": \"Updated Test Description\",\n    \"unitOfMeasureType\": \"Other\",\n    \"addConstraints\": [],\n    \"removeConstraints\": []\n}\n]",
+							"raw": "[\n    {\n        \"id\": \"{{actionTypeId0}}\",\n        \"customFields\": {\n            \"updated_custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n        },\n        \"tags\": [\n            \"updated_Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"key1\": \"value1\",\n            \"key2\": \"value2\"\n        },\n        \"name\": \"Test_name-332452b4-c047-45fe-adfc-b311321014c7\",\n        \"description\": \"Updated Test Description\",\n        \"unitOfMeasureType\": \"Other\",\n        \"addConstraints\": [],\n        \"removeConstraints\": []\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4212,7 +4216,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"competitionType\": \"Leaderboard\",\n    \"numberOfRounds\": 1,\n    \"numberOfGroupStages\": 0,\n    \"name\": \"Test competition\",\n    \"description\": \"Test Description\",\n    \"termsAndConditions\": \"test terms and conditions\",\n    \"entrantMemberType\": \"Individual\",\n    \"maxNumberOfEntrants\": 1000,\n    \"minNumberOfEntrants\": 1,\n    \"entrantMemberTagsFilter\": {\n        \"must\": [\n            \"{{tagKey0}}\"\n        ],\n        \"mustNot\": null,\n        \"should\": null,\n        \"shouldMatchAtLeast\": null\n    },\n    \"productTagsFilter\": {\n        \"must\": [\n            \"{{tagKey1}}\"\n        ],\n        \"mustNot\": null,\n        \"should\": null,\n        \"shouldMatchAtLeast\": null\n    },\n    \"productIds\": null,\n    \"rules\": [\n        {\n            \"entityId\": null,\n            \"action\": \"Test Action\",\n            \"context\": \"Test Context\",\n            \"rules\": {\n                \"type\": \"expression\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"Scope\",\n                \"operand\": \"Operand\",\n                \"operator\": \"Operator\",\n                \"value\": null,\n                \"rules\": null,\n                \"then\": null,\n                \"lineNumber\": 1\n            },\n            \"id\": null,\n            \"entityType\": null\n        }\n    ],\n    \"scheduledStartDate\": \"2022-03-24T13:22:16.68+02:00\",\n    \"scheduledEndDate\": \"2022-03-31T13:22:16.68+02:00\",\n    \"translations\": null,\n    \"contests\": {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"df3a7be2-1e2d-403f-b0ba-f84bdfe7e409\": \"f05baa4f-f7e0-45f9-9633-d0b4d7250201\"\n        },\n        \"row\": null,\n        \"round\": 2,\n        \"groupStage\": null,\n        \"groupStageLabel\": null,\n        \"entrantsFromContest\": null,\n        \"name\": \"Test Group Stage Label\",\n        \"description\": \"Test Description\",\n        \"termsAndConditions\": \"Test Terms and Conditions\",\n        \"roundType\": \"TimeBound\",\n        \"maxNumberOfEntrants\": 100,\n        \"minNumberOfEntrants\": 20,\n        \"rules\": [\n            {\n                \"entityId\": null,\n                \"action\": \"Test Action\",\n                \"context\": \"Test Context\",\n                \"rules\": {\n                    \"type\": \"expression\",\n                    \"mustMatchAll\": true,\n                    \"mustEvaluateTo\": true,\n                    \"scope\": \"Scope\",\n                    \"operand\": \"Operand\",\n                    \"operator\": \"Operator\",\n                    \"value\": null,\n                    \"rules\": null,\n                    \"then\": null,\n                    \"lineNumber\": 1\n                },\n                \"id\": null,\n                \"entityType\": null\n            }\n        ],\n        \"scheduledStartDate\": \"2022-03-28T16:31:08.731+02:00\",\n        \"scheduledEndDate\": \"2022-03-29T16:31:08.731+02:00\",\n        \"strategies\": {\n            \"strategyType\": \"FirstTo\",\n            \"rankingStrategy\": {\n                \"constraints\": [\n                    \"test_constraints\"\n                ]\n            },\n            \"scoringStrategy\": {\n                \"limitUpdatesTo\": 400,\n                \"sumBestXOf\": 100,\n                \"lastUpdateTimeStamp\": 100,\n                \"recordTimeWhenSumReaches\": 300.0\n            }\n        },\n        \"translations\": [\n            {\n                \"id\": null,\n                \"accountId\": null,\n                \"entityId\": null,\n                \"entityType\": null,\n                \"version\": null,\n                \"created\": null,\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Given\"\n                    }\n                ],\n                \"languageKey\": \"fit\"\n            }\n        ],\n        \"rewards\": [\n            {\n                \"customFields\": null,\n                \"tags\": null,\n                \"metadata\": null,\n                \"name\": \"Given Pfunguro\",\n                \"description\": \"Test_description\",\n                \"rewardRank\": \"1,2,3,4-10\",\n                \"rewardValue\": 0.33405660734854725,\n                \"icon\": null,\n                \"issueLimit\": null,\n                \"delay\": 100,\n                \"pointInTime\": null,\n                \"period\": 100,\n                \"translations\": null,\n                \"addConstraints\": [],\n                \"rewardTypeId\": \"-sHw0H8BVp8Gz4wlE9p9\"\n            }\n        ],\n        \"constraints\": []\n    },\n    \"rewards\": [\n        {\n            \"customFields\": null,\n            \"tags\": null,\n            \"metadata\": null,\n            \"name\": \"Pfunguro\",\n            \"description\": \"Test_description\",\n            \"rewardRank\": \"1,2,3\",\n            \"rewardValue\": 0.06438600205843392,\n            \"icon\": null,\n            \"issueLimit\": null,\n            \"delay\": 100,\n            \"pointInTime\": null,\n            \"period\": 100,\n            \"translations\": null,\n            \"addConstraints\": [],\n            \"rewardTypeId\": \"iEKpu38BqB4XSXWDv6Pf\"\n        }\n    ],\n    \"constraints\": [\n        \"optinRequiredForEntrants\"\n    ],\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"c8786add-3775-4022-939e-bdc63d5ae8f2\": \"b68d9232-fef7-4c80-a8eb-a01ab1f30748\"\n    }\n}",
+							"raw": "{\n    \"name\": \"Competition err\",\n    \"tags\": [],\n    \"numberOfRounds\": 2,\n    \"description\": null,\n    \"termsAndConditions\": null,\n    \"entrantMemberType\": \"Individual\",\n    \"numberOfGroupStages\": 0,\n    \"contests\": null,\n    \"entrantMemberTagsFilter\": {\n        \"must\": [\n            \"{{tagKey0}}\"\n        ],\n        \"mustNot\": null,\n        \"should\": null,\n        \"shouldMatchAtLeast\": null\n    },\n    \"customFields\": {\n        \"test_cf_term4a0d39b8-615d-4a3a-bdee-9ce0ebeebe5e\": null,\n        \"test_cf_termf2fc9e11-f2e0-41c9-95d8-93a30c552d4f\": null,\n        \"test_cf_termd3f7cae6-201d-4078-ab3a-0942d9ce2372\": null,\n        \"test_cf_term335dc99f-98da-428e-a2d7-c28b49f41e29\": null\n    },\n    \"metadata\": null,\n    \"addConstraints\": [\n        \"autoStart\",\n        \"autoStop\"\n    ],\n    \"translations\": [\n        {\n            \"languageKey\": \"fit\",\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"Test\"\n                },\n                {\n                    \"fieldName\": \"description\",\n                    \"text\": \"Test\"\n                },\n                {\n                    \"fieldName\": \"termsAndConditions\",\n                    \"text\": \"Test\"\n                }\n            ]\n        }\n    ],\n    \"rules\": [\n        {\n            \"entityId\": \"\",\n            \"action\": \"competition.start\",\n            \"context\": \"competition\",\n            \"rules\": {\n                \"type\": \"condition\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"\",\n                \"operand\": \"\",\n                \"operator\": \"\",\n                \"value\": \"\",\n                \"rules\": [],\n                \"then\": [\n                    {\n                        \"routine\": \"tickle\",\n                        \"arguments\": [\n                            {\n                                \"value\": \"tummy\",\n                                \"argument\": \"tummy\"\n                            },\n                            {\n                                \"argument\": \"for\",\n                                \"value\": \"12\",\n                                \"type\": \"hour\"\n                            }\n                        ],\n                        \"lineNumber\": 2\n                    }\n                ],\n                \"lineNumber\": 1\n            }\n        },\n        {\n            \"entityId\": \"\",\n            \"action\": \"competition.finish\",\n            \"context\": \"competition\",\n            \"rules\": {\n                \"type\": \"condition\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"\",\n                \"operand\": \"\",\n                \"operator\": \"\",\n                \"value\": \"\",\n                \"rules\": [],\n                \"then\": [\n                    {\n                        \"routine\": \"\",\n                        \"arguments\": [],\n                        \"lineNumber\": 2\n                    }\n                ],\n                \"lineNumber\": 1\n            }\n        },\n        {\n            \"entityId\": \"\",\n            \"action\": \"competition.finalise\",\n            \"context\": \"competition\",\n            \"rules\": {\n                \"type\": \"condition\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"\",\n                \"operand\": \"\",\n                \"operator\": \"\",\n                \"value\": \"\",\n                \"rules\": [],\n                \"then\": [\n                    {\n                        \"routine\": \"\",\n                        \"arguments\": [],\n                        \"lineNumber\": 2\n                    }\n                ],\n                \"lineNumber\": 1\n            }\n        },\n        {\n            \"entityId\": \"\",\n            \"action\": \"competition.cancel\",\n            \"context\": \"competition\",\n            \"rules\": {\n                \"type\": \"condition\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"\",\n                \"operand\": \"\",\n                \"operator\": \"\",\n                \"value\": \"\",\n                \"rules\": [],\n                \"then\": [\n                    {\n                        \"routine\": \"\",\n                        \"arguments\": [],\n                        \"lineNumber\": 2\n                    }\n                ],\n                \"lineNumber\": 1\n            }\n        },\n        {\n            \"entityId\": \"\",\n            \"action\": \"competition.entrant\",\n            \"context\": \"competition\",\n            \"rules\": {\n                \"type\": \"condition\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"\",\n                \"operand\": \"\",\n                \"operator\": \"\",\n                \"value\": \"\",\n                \"rules\": [],\n                \"then\": [\n                    {\n                        \"routine\": \"\",\n                        \"arguments\": [],\n                        \"lineNumber\": 2\n                    }\n                ],\n                \"lineNumber\": 1\n            }\n        }\n    ],\n    \"scheduledStartDate\": \"2022-05-30T05:03:10.000Z\",\n    \"scheduledEndDate\": \"2022-06-03T21:00:00.000Z\",\n    \"productIds\": [\n        \"FnGPkn8Bx-TZJpSsMShQ\",\n        \"y3CIkn8Bx-TZJpSs4vR7\",\n        \"Khpxk38Bz8ZYJssX8IFA\",\n        \"FxUuk38Bz8ZYJssX71xy\",\n        \"hf4uln8BVOkJTwvofkOS\",\n        \"QXb5kn8Bx-TZJpSsLdR5\",\n        \"chQhk38Bz8ZYJssXXFYO\",\n        \"4hhVk38Bz8ZYJssXUSGt\",\n        \"vhY_k38Bz8ZYJssXcHit\",\n        \"gxlkk38Bz8ZYJssXYEd7\",\n        \"wXGkkn8Bx-TZJpSsKPc8\",\n        \"CXGkkn8Bx-TZJpSsoPwL\",\n        \"rHGYkn8Bx-TZJpSskoOg\",\n        \"fnKmkn8Bx-TZJpSsRAwE\",\n        \"RXGhkn8Bx-TZJpSsINcN\",\n        \"jXGVkn8Bx-TZJpSsXmZ-\",\n        \"snGZkn8Bx-TZJpSsvIzQ\",\n        \"x3Kpkn8Bx-TZJpSs9jby\",\n        \"GXGkkn8Bx-TZJpSsE_d3\",\n        \"hHGPkn8Bx-TZJpSsZyol\"\n    ],\n    \"minNumberOfEntrants\": 1,\n    \"maxNumberOfEntrants\": null,\n    \"competitionType\": \"Leaderboard\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4370,7 +4374,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\":\"{{competitionId0}}\",\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":null,\n    \"competitionType\":null,\n    \"numberOfRounds\":null,\n    \"numberOfGroupStages\":null,\n    \"name\":null,\n    \"description\":\"updated description 23443a54-9286-43e6-afff-44abfae89e3b\",\n    \"termsAndConditions\":null,\n    \"entrantMemberType\":null,\n    \"maxNumberOfEntrants\":null,\n    \"minNumberOfEntrants\":null,\n    \"scheduledStartDate\":null,\n    \"scheduledEndDate\":null,\n    \"entrantMemberTagsFilter\": null,\n    \"productTagsFilter\":null,\n    \"constraints\":null,\n    \"productIds\":null,\n    \"createContests\":null,\n    \"updateContests\":null\n    }",
+							"raw": "{\n    \"id\":\"{{competitionId0}}\",\n    \"customFields\": {\n        \"updated_custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n    },\n    \"tags\": [\n        \"updated_Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n    ],\n    \"metadata\": {\n        \"updated_c8786add-3775-4022-939e-bdc63d5ae8f2\": \"b68d9232-fef7-4c80-a8eb-a01ab1f30748\"\n    },\n    \"competitionType\":null,\n    \"numberOfRounds\":null,\n    \"numberOfGroupStages\":null,\n    \"name\":null,\n    \"description\":\"updated description 23443a54-9286-43e6-afff-44abfae89e3b\",\n    \"termsAndConditions\":null,\n    \"entrantMemberType\":null,\n    \"maxNumberOfEntrants\":null,\n    \"minNumberOfEntrants\":null,\n    \"scheduledStartDate\":null,\n    \"scheduledEndDate\":null,\n    \"entrantMemberTagsFilter\": null,\n    \"productTagsFilter\":null,\n    \"constraints\":null,\n    \"productIds\":null,\n    \"createContests\":null,\n    \"updateContests\":null\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4593,7 +4597,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"c7ae8daf-7ab8-4e16-8820-d9a06638db0e\": \"b5695d43-ea75-492a-9c1e-2fc5b00395ba\"\n    },\n    \"description\": \"Test_key-0cdd3b75-4c31-40d1-ab4f-657c0fb90c1d\",\n    \"version\": null,\n    \"name\": \"Test_name-11a2fc28-ae29-4bca-bd19-8378bf1f0b82\",\n    \"uptime\": 55034353,\n    \"constraints\": [],\n    \"statistics\": null,\n    \"lastKnownStatusCode\": 62702245\n}",
+							"raw": "{\n    \"customFields\": {\n        \"custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n    },\n    \"tags\": [\n        \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n    ],\n    \"metadata\": {\n        \"c7ae8daf-7ab8-4e16-8820-d9a06638db0e\": \"b5695d43-ea75-492a-9c1e-2fc5b00395ba\"\n    },\n    \"description\": \"Test_key-0cdd3b75-4c31-40d1-ab4f-657c0fb90c1d\",\n    \"version\": null,\n    \"name\": \"Test_name-11a2fc28-ae29-4bca-bd19-8378bf1f0b82\",\n    \"uptime\": 55034353,\n    \"constraints\": [],\n    \"statistics\": null,\n    \"lastKnownStatusCode\": 62702245\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4665,7 +4669,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": {{computeEngineId0}},\n    \"description\": \"updated description\"\n}",
+							"raw": "{\n    \"id\": \"{{computeEngineId0}}\",\n    \"description\": \"updated description\",\n    \"customFields\": {\n        \"updated_custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n    },\n    \"tags\": [\n        \"updated_Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n    ],\n    \"metadata\": {\n        \"updated_c7ae8daf-7ab8-4e16-8820-d9a06638db0e\": \"b5695d43-ea75-492a-9c1e-2fc5b00395ba\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4806,7 +4810,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"customFields\":\n        {\"test_cf_termf1fb8258-8430-45d1-aa56-87b6d80b6f5f\":\"name\"},\n    \"tags\":[\"Test_key-2908e27c-3a84-45cd-8269-b7bf21f404a3\"],\n    \"metadata\":\n        {\"239be65d-1969-4965-887c-8d9fc6b68d54\":\"46a89988-165f-431c-954f-644b877a9a73\"},\n    \"name\":\"SQS_1\",\n    \"uri\":\"https://www.ziqni.com\",\n    \"acessKey\":\"Test_Access_key\",\n    \"secretKey\":\"Test_Secret_key\",\n    \"description\":\"My example sqs connection\",\n    \"transformerId\":\"tSlP1X8BKIbFZ6_wxy25\"\n    }",
+									"raw": "{\n    \"customFields\": {\n        \"test_cf_termf1fb8258-8430-45d1-aa56-87b6d80b6f5f\": \"name\"\n    },\n    \"tags\": [\n        \"Test_key-2908e27c-3a84-45cd-8269-b7bf21f404a3\"\n    ],\n    \"metadata\": {\n        \"239be65d-1969-4965-887c-8d9fc6b68d54\": \"46a89988-165f-431c-954f-644b877a9a73\"\n    },\n    \"name\": \"SQS_1\",\n    \"uri\": \"https://www.ziqni.com\",\n    \"acessKey\": \"Test_Access_key\",\n    \"secretKey\": \"Test_Secret_key\",\n    \"description\": \"My example sqs connection\",\n    \"transformerId\": \"dwji9YABeqwiubwQZbY5\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4880,7 +4884,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id\":\"{{sqsConnectionId0}}\",\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":null,\n    \"name\":null,\n    \"description\":\"Updated sqs description\",\n    \"uri\":null,\n    \"acessKey\":null,\n    \"secretKey\":null,\n    \"transformerId\":null\n    }",
+									"raw": "{\n    \"id\":\"{{sqsConnectionId0}}\",\n    \"customFields\": {\n        \"updated_custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n    },\n    \"tags\": [\n        \"updated_Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n    ],\n    \"metadata\": {\n        \"updated_c8786add-3775-4022-939e-bdc63d5ae8f2\": \"b68d9232-fef7-4c80-a8eb-a01ab1f30748\"\n    },\n    \"name\":null,\n    \"description\":\"Updated sqs description\",\n    \"uri\":null,\n    \"acessKey\":null,\n    \"secretKey\":null,\n    \"transformerId\":null\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5086,7 +5090,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"customFields\":{\"test_cf_term6d7cd179-015b-43b9-8ba4-3e0261381ab1\":\"name\"},\n    \"tags\":[\"Test_key-0eb85820-059e-4400-b5d9-27b8a6eb3a75\"],\n    \"metadata\":null,\n    \"name\":\"my-rabbit-connection\",\n    \"description\":\"Test Description\",\n    \"port\":30007,\n    \"virtualHost\":\"/\",\n    \"uri\":\"broker-service.competitionlabs.com\",\n    \"userName\":\"complabs_stg_client\",\n    \"password\":\"bKv=73j>TW86\",\n    \"queueName\":\"sabai99_events-test-events-stream\",\n    \"exchange\":\"sabai99_prd_events\",\n    \"routingKey\":\"BET_LOG_KA\",\n    \"addConstraints\":[\"ssl\",\"durable\",\"exclusive\",\"autoDelete\"],\n    \"transformerId\":\"xil-1X8BKIbFZ6_wpS1l\"}",
+									"raw": "{\n    \"customFields\": {\n        \"test_cf_term6d7cd179-015b-43b9-8ba4-3e0261381ab1\": \"name\"\n    },\n    \"tags\": [\n        \"Test_key-0eb85820-059e-4400-b5d9-27b8a6eb3a75\"\n    ],\n    \"metadata\": null,\n    \"name\": \"my-rabbit-connection\",\n    \"description\": \"Test Description\",\n    \"port\": 30007,\n    \"virtualHost\": \"/\",\n    \"uri\": \"broker-service.competitionlabs.com\",\n    \"userName\": \"complabs_stg_client\",\n    \"password\": \"bKv=73j>TW86\",\n    \"queueName\": \"sabai99_events-test-events-stream\",\n    \"exchange\": \"sabai99_prd_events\",\n    \"routingKey\": \"BET_LOG_KA\",\n    \"addConstraints\": [\n        \"ssl\",\n        \"durable\",\n        \"exclusive\",\n        \"autoDelete\"\n    ],\n    \"transformerId\": \"mEiV-oABGMi3IcVM-uDG\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5160,7 +5164,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id\":\"{{rabbitMqConnectionId0}}\",\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":null,\n    \"name\":\"UPDATED_NAME\",\n    \"description\":\"Updated rabbitqm description\",\n    \"uri\":null,\n    \"virtualHost\":null,\n    \"port\":null,\n    \"userName\":null,\n    \"password\":null,\n    \"queueName\":null,\n    \"exchange\":null,\n    \"routingKey\":null,\n    \"constraints\":null,\n    \"transformerId\":null\n    }",
+									"raw": "{\n    \"id\":\"{{rabbitMqConnectionId0}}\",\n    \"customFields\": {\n        \"updated_custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n    },\n    \"tags\": [\n        \"updated_Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n    ],\n    \"metadata\": {\n        \"updated_c8786add-3775-4022-939e-bdc63d5ae8f2\": \"b68d9232-fef7-4c80-a8eb-a01ab1f30748\"\n    },\n    \"name\":\"UPDATED_NAME\",\n    \"description\":\"Updated rabbitqm description\",\n    \"uri\":null,\n    \"virtualHost\":null,\n    \"port\":null,\n    \"userName\":null,\n    \"password\":null,\n    \"queueName\":null,\n    \"exchange\":null,\n    \"routingKey\":null,\n    \"constraints\":null,\n    \"transformerId\":null\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5366,7 +5370,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"customFields\":{\"test_cf_term72021018-c5c5-419a-82fa-05fd0b4eb6b6\":\"name\"},\n    \"tags\":[\"Test_key-19553969-50f5-41cf-bf87-f618f8b66eaa\"],\n    \"metadata\":{\"c720d5a5-0500-4837-acf1-25892f4c9a19\":\"95094f88-b438-480f-a753-4bdbc298ac33\"},\n    \"name\":\"Kafka_1\",\n    \"description\":\"My example kafka connection\",\n    \"brokers\":\"Example broker\",\n    \"groupId\":\"Test_Group_Id\",\n    \"topic\":\"Test_Topic\",\n    \"transformerId\":\"zSmR1X8BKIbFZ6_w1C2x\"\n    }",
+									"raw": "{\n    \"customFields\": {\n        \"test_cf_term72021018-c5c5-419a-82fa-05fd0b4eb6b6\": \"name\"\n    },\n    \"tags\": [\n        \"Test_key-19553969-50f5-41cf-bf87-f618f8b66eaa\"\n    ],\n    \"metadata\": {\n        \"c720d5a5-0500-4837-acf1-25892f4c9a19\": \"95094f88-b438-480f-a753-4bdbc298ac33\"\n    },\n    \"name\": \"Kafka_1\",\n    \"description\": \"My example kafka connection\",\n    \"brokers\": \"Example broker\",\n    \"groupId\": \"Test_Group_Id\",\n    \"topic\": \"Test_Topic\",\n    \"transformerId\": \"dwji9YABeqwiubwQZbY5\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5440,7 +5444,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":null,\n    \"name\":null,\n    \"description\":\"Updated kafka description\",\n    \"brokers\":null,\n    \"groupId\":null,\n    \"topic\":null,\n    \"transformerId\":null,\n    \"id\":\"{{kafkaConnectionId0}}\"\n    }",
+									"raw": "{\n    \"customFields\": {\n        \"updated_custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n    },\n    \"tags\": [\n        \"updated_Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n    ],\n    \"metadata\": {\n        \"updated_c8786add-3775-4022-939e-bdc63d5ae8f2\": \"b68d9232-fef7-4c80-a8eb-a01ab1f30748\"\n    },\n    \"name\":null,\n    \"description\":\"Updated kafka description\",\n    \"brokers\":null,\n    \"groupId\":null,\n    \"topic\":null,\n    \"transformerId\":null,\n    \"id\":\"{{kafkaConnectionId0}}\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -8143,7 +8147,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"df3a7be2-1e2d-403f-b0ba-f84bdfe7e409\": \"f05baa4f-f7e0-45f9-9633-d0b4d7250201\"\n    },\n    \"competitionId\": \"9MHv0H8BVp8Gz4wl9dqm\",\n    \"row\": null,\n    \"round\": 2,\n    \"groupStage\": null,\n    \"groupStageLabel\": null,\n    \"entrantsFromContest\": null,\n    \"name\": \"Test Group Stage Label\",\n    \"description\": \"Test Description\",\n    \"termsAndConditions\": \"Test Terms and Conditions\",\n    \"roundType\": \"TimeBound\",\n    \"maxNumberOfEntrants\": 100,\n    \"minNumberOfEntrants\": 20,\n    \"rules\": [\n        {\n            \"entityId\": null,\n            \"action\": \"Test Action\",\n            \"context\": \"Test Context\",\n            \"rules\": {\n                \"type\": \"expression\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"Scope\",\n                \"operand\": \"Operand\",\n                \"operator\": \"Operator\",\n                \"value\": null,\n                \"rules\": null,\n                \"then\": null,\n                \"lineNumber\": 1\n            },\n            \"id\": null,\n            \"entityType\": null\n        }\n    ],\n    \"scheduledStartDate\": \"2022-03-28T16:31:08.731+02:00\",\n    \"scheduledEndDate\": \"2022-03-29T16:31:08.731+02:00\",\n    \"strategies\": {\n        \"strategyType\": \"FirstTo\",\n        \"rankingStrategy\": {\n            \"constraints\": [\n                \"test_constraints\"\n            ]\n        },\n        \"scoringStrategy\": {\n            \"limitUpdatesTo\": 400,\n            \"sumBestXOf\": 100,\n            \"lastUpdateTimeStamp\": 100,\n            \"recordTimeWhenSumReaches\": 300.0\n        }\n    },\n    \"translations\": [\n        {\n            \"id\": null,\n            \"accountId\": null,\n            \"entityId\": null,\n            \"entityType\": null,\n            \"version\": null,\n            \"created\": null,\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"Given\"\n                }\n            ],\n            \"languageKey\": \"fit\"\n        }\n    ],\n    \"rewards\": [\n        {\n            \"customFields\": null,\n            \"tags\": null,\n            \"metadata\": null,\n            \"name\": \"Given Pfunguro\",\n            \"description\": \"Test_description\",\n            \"rewardRank\": \"1,2,3,4-10\",\n            \"rewardValue\": 0.33405660734854725,\n            \"icon\": null,\n            \"issueLimit\": null,\n            \"delay\": 100,\n            \"pointInTime\": null,\n            \"period\": 100,\n            \"translations\": null,\n            \"addConstraints\": [],\n            \"rewardTypeId\": \"-sHw0H8BVp8Gz4wlE9p9\"\n        }\n    ],\n    \"constraints\": []\n}",
+							"raw": "{\n    \"customFields\": {\n        \"custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n    },\n    \"tags\": [\n        \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n    ],\n    \"metadata\": {\n        \"df3a7be2-1e2d-403f-b0ba-f84bdfe7e409\": \"f05baa4f-f7e0-45f9-9633-d0b4d7250201\"\n    },\n    \"competitionId\": \"9MHv0H8BVp8Gz4wl9dqm\",\n    \"row\": null,\n    \"round\": 2,\n    \"groupStage\": null,\n    \"groupStageLabel\": null,\n    \"entrantsFromContest\": null,\n    \"name\": \"Test Group Stage Label\",\n    \"description\": \"Test Description\",\n    \"termsAndConditions\": \"Test Terms and Conditions\",\n    \"roundType\": \"TimeBound\",\n    \"maxNumberOfEntrants\": 100,\n    \"minNumberOfEntrants\": 20,\n    \"rules\": [\n        {\n            \"entityId\": null,\n            \"action\": \"Test Action\",\n            \"context\": \"Test Context\",\n            \"rules\": {\n                \"type\": \"expression\",\n                \"mustMatchAll\": true,\n                \"mustEvaluateTo\": true,\n                \"scope\": \"Scope\",\n                \"operand\": \"Operand\",\n                \"operator\": \"Operator\",\n                \"value\": null,\n                \"rules\": null,\n                \"then\": null,\n                \"lineNumber\": 1\n            },\n            \"id\": null,\n            \"entityType\": null\n        }\n    ],\n    \"scheduledStartDate\": \"2022-03-28T16:31:08.731+02:00\",\n    \"scheduledEndDate\": \"2022-03-29T16:31:08.731+02:00\",\n    \"strategies\": {\n        \"strategyType\": \"FirstTo\",\n        \"rankingStrategy\": {\n            \"constraints\": [\n                \"test_constraints\"\n            ]\n        },\n        \"scoringStrategy\": {\n            \"limitUpdatesTo\": 400,\n            \"sumBestXOf\": 100,\n            \"lastUpdateTimeStamp\": 100,\n            \"recordTimeWhenSumReaches\": 300.0\n        }\n    },\n    \"translations\": [\n        {\n            \"id\": null,\n            \"accountId\": null,\n            \"entityId\": null,\n            \"entityType\": null,\n            \"version\": null,\n            \"created\": null,\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"Given\"\n                }\n            ],\n            \"languageKey\": \"fit\"\n        }\n    ],\n    \"rewards\": [\n        {\n            \"customFields\": null,\n            \"tags\": null,\n            \"metadata\": null,\n            \"name\": \"Given Pfunguro\",\n            \"description\": \"Test_description\",\n            \"rewardRank\": \"1,2,3,4-10\",\n            \"rewardValue\": 0.33405660734854725,\n            \"icon\": null,\n            \"issueLimit\": null,\n            \"delay\": 100,\n            \"pointInTime\": null,\n            \"period\": 100,\n            \"translations\": null,\n            \"addConstraints\": [],\n            \"rewardTypeId\": \"-sHw0H8BVp8Gz4wlE9p9\"\n        }\n    ],\n    \"constraints\": []\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8382,7 +8386,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n   {\n    \"name\": \"test custom field 0\",\n    \"key\": \"test_custom_field_key\",\n    \"description\": \"some text\",\n    \"fieldType\": \"TextArray\",\n    \"appliesTo\": \"Repository\"\n},\n{\n    \"name\": \"test custom field 1\",\n    \"key\": \"test_custom_field_key_1\",\n    \"description\": \"test description\",\n    \"fieldType\": \"TextArray\",\n    \"appliesTo\": \"Repository\"\n}\n]",
+							"raw": "[\n    {\n        \"name\": \"test custom field 0\",\n        \"key\": \"test_custom_field_key_10\",\n        \"description\": \"some text\",\n        \"fieldType\": \"TextArray\",\n        \"appliesTo\": \"Repository\"\n    },\n    {\n        \"name\": \"test custom field 1\",\n        \"key\": \"test_custom_field_key_11\",\n        \"description\": \"test description\",\n        \"fieldType\": \"TextArray\",\n        \"appliesTo\": \"Repository\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8639,7 +8643,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"memberRefId\":\"Test_key-4d180cbe-3f9a-4b14-8730-233f25a0943e\",\n        \"action\":\"Test_key-2fb87d97-7be0-4239-922c-d194a68856cb\",\n        \"batchId\":\"Test_key-492f10c4-08d1-48c0-942f-e211095924b6\",\n        \"entityRefId\":\"Test_key-4cb78e90-2266-48ca-a641-121ccd6e006d\",\n        \"sourceValue\":1.0,\n        \"transactionTimestamp\":\"2022-03-28T11:38:11.215+02:00\",\n        \"tags\":null,\n        \"eventRefId\":null,\n        \"memberId\":null,\n        \"customFields\":null\n        },\n    {\n        \"memberRefId\":\"Test_key-4d180cbe-3f9a-4b14-8730-233f25a0943e\",\n        \"action\":\"Test_key-2fb87d97-7be0-4239-922c-d194a68856cb\",\n        \"batchId\":\"Test_key-492f10c4-08d1-48c0-942f-e211095924b6\",\n        \"entityRefId\":\"Test_key-4cb78e90-2266-48ca-a641-121ccd6e006d\",\n        \"sourceValue\":1.0,\n        \"transactionTimestamp\":\"2022-03-28T11:38:11.215+02:00\",\n        \"tags\":null,\n        \"eventRefId\":null,\n        \"memberId\":null,\n        \"customFields\":null\n        }\n]",
+							"raw": "[\n    {\n        \"memberRefId\": \"Test_key-4d180cbe-3f9a-4b14-8730-233f25a0943e\",\n        \"action\": \"Test_key-2fb87d97-7be0-4239-922c-d194a68856cb\",\n        \"batchId\": \"Test_key-492f10c4-08d1-48c0-942f-e211095924b6\",\n        \"entityRefId\": \"Test_key-4cb78e90-2266-48ca-a641-121ccd6e006d\",\n        \"sourceValue\": 1.0,\n        \"transactionTimestamp\": \"2022-03-28T11:38:11.215+02:00\",\n        \"eventRefId\": null,\n        \"memberId\": null,\n        \"customFields\": {\n            \"custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ]\n    },\n    {\n        \"memberRefId\": \"Test_key-4d180cbe-3f9a-4b14-8730-233f25a0943e\",\n        \"action\": \"Test_key-2fb87d97-7be0-4239-922c-d194a68856cb\",\n        \"batchId\": \"Test_key-492f10c4-08d1-48c0-942f-e211095924b6\",\n        \"entityRefId\": \"Test_key-4cb78e90-2266-48ca-a641-121ccd6e006d\",\n        \"sourceValue\": 1.0,\n        \"transactionTimestamp\": \"2022-03-28T11:38:11.215+02:00\",\n        \"tags\": null,\n        \"eventRefId\": null,\n        \"memberId\": null,\n        \"customFields\": null\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8779,7 +8783,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customFields\":null,\n    \"tags\":null,\n    \"metadata\":{\"6318a04e-6a13-490d-9aa6-f9b5cb8208e6\":\"51698300-ba75-4e7c-83ad-f3f8eed25ff6\"},\n    \"repositoryId\":\"{{repositoryId0}}\",\n    \"name\":\"Test_name-40ca1eb2-f206-4aea-b2b1-d12f626c93e4\",\n    \"mimeType\":\"image/jpeg\",\n    \"parentFolderPath\":\"/files\",\n    \"constraints\":null\n    }",
+							"raw": "{\n    \"customFields\": {\n        \"custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n    },\n    \"tags\": [\n        \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n    ],\n    \"metadata\": {\n        \"6318a04e-6a13-490d-9aa6-f9b5cb8208e6\": \"51698300-ba75-4e7c-83ad-f3f8eed25ff6\"\n    },\n    \"repositoryId\": \"{{repositoryId0}}\",\n    \"name\": \"Test_name-40ca1eb2-f206-4aea-b2b1-d12f626c93e4\",\n    \"mimeType\": \"image/jpeg\",\n    \"parentFolderPath\": \"/files\",\n    \"constraints\": null\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -9266,7 +9270,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"413acc2a-914b-4214-8287-72c3a3bb3440=c749ec30-0c54-474e-8e34-e86c210480a2\":\"meta value\"\n        },\n    \"key\": \"ady\"\n},\n    {\n    \"customFields\": null,\n    \"tags\": null,\n    \"metadata\": {\n        \"413acc2a-914b-4214-8287-72c3a3bb3440=c749ec30-0c54-474e-8e34-e86c210480a2\":\"meta value\"\n        },\n    \"key\": \"ae\"\n}\n]",
+							"raw": "[\n    {\n        \"customFields\": {\n            \"custom_name\": \"test_cf_term68b743e9-2833-4a61-8595-3fa536c3ab9b\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"413acc2a-914b-4214-8287-72c3a3bb3440=c749ec30-0c54-474e-8e34-e86c210480a2\": \"meta value\"\n        },\n        \"key\": \"akk\"\n    },\n    {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"413acc2a-914b-4214-8287-72c3a3bb3440=c749ec30-0c54-474e-8e34-e86c210480a2\": \"meta value\"\n        },\n        \"key\": \"akz\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -9766,7 +9770,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n    \"name\": \"name\",\n    \"memberRefId\": \"1000156\",\n    \"memberType\": \"Individual\",\n    \"teamMembers\": null,\n    \"addConstraints\": [\n        \"disabled\"\n    ],\n    \"customFields\": {\n        \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n    },\n    \"metadata\": {},\n    \"tags\": null\n},\n{\n    \"name\": \"name1\",\n    \"memberRefId\": \"1000254\",\n    \"memberType\": \"Individual\",\n    \"teamMembers\": null,\n    \"addConstraints\": [\n        \"disabled\"\n    ],\n    \"customFields\": {\n        \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n    },\n    \"metadata\": {},\n    \"tags\": null\n}\n]",
+							"raw": "[\n    {\n        \"name\": \"name\",\n        \"memberRefId\": \"10001561\",\n        \"memberType\": \"Individual\",\n        \"teamMembers\": null,\n        \"addConstraints\": [\n            \"disabled\"\n        ],\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33a2f7956\": \"customFieldValue1\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"413acc2a-914b-4214-8287-72c3a3bb3440c749ec30-0c54-474e-8e34-e86c210480a2\": \"meta value\"\n        }\n    },\n    {\n        \"name\": \"name1\",\n        \"memberRefId\": \"10002541\",\n        \"memberType\": \"Individual\",\n        \"teamMembers\": null,\n        \"addConstraints\": [\n            \"disabled\"\n        ],\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n        },\n        \"metadata\": {},\n        \"tags\": null\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -10065,7 +10069,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"customFields\":{},\n        \"tags\":null,\n        \"metadata\":null,\n        \"eventRefType\":\"Achievement\",\n        \"eventRefId\":null,\n        \"messageType\":\"Achievement\",\n        \"subject\":\"Test_subject\",\n        \"body\":\"Test_body\",\n        \"prize\":null,\n        \"status\":\"Actioned\",\n        \"expiry\":null,\n        \"memberId\":[],\n        \"translations\":[],\n        \"translatableFields\":null\n        },\n    {\n        \"customFields\":{},\n        \"tags\":null,\n        \"metadata\":null,\n        \"eventRefType\":\"Achievement\",\n        \"eventRefId\":null,\n        \"messageType\":\"Achievement\",\n        \"subject\":\"Test_subject\",\n        \"body\":\"Test_body\",\n        \"prize\":null,\n        \"status\":\"Actioned\",\n        \"expiry\":null,\n        \"memberId\":[],\n        \"translations\":[],\n        \"translatableFields\":null\n        }\n]",
+							"raw": "[\n    {\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33a2f7956\": \"customFieldValue1\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"413acc2a-914b-4214-8287-72c3a3bb3440c749ec30-0c54-474e-8e34-e86c210480a2\": \"meta value\"\n        },\n        \"eventRefType\": \"Achievement\",\n        \"eventRefId\": null,\n        \"messageType\": \"Achievement\",\n        \"subject\": \"Test_subject\",\n        \"body\": \"Test_body\",\n        \"prize\": null,\n        \"status\": \"Actioned\",\n        \"expiry\": null,\n        \"memberId\": [],\n        \"translations\": [],\n        \"translatableFields\": null\n    },\n    {\n        \"customFields\": {},\n        \"tags\": null,\n        \"metadata\": null,\n        \"eventRefType\": \"Achievement\",\n        \"eventRefId\": null,\n        \"messageType\": \"Achievement\",\n        \"subject\": \"Test_subject\",\n        \"body\": \"Test_body\",\n        \"prize\": null,\n        \"status\": \"Actioned\",\n        \"expiry\": null,\n        \"memberId\": [],\n        \"translations\": [],\n        \"translatableFields\": null\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -10310,7 +10314,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"customFields\":{},\n        \"tags\":null,\n        \"metadata\":null,\n        \"messageType\":\"Achievement\",\n        \"subject\":\"Test_subject\",\n        \"body\":\"Test_body\",\n        \"status\":\"Actioned\",\n        \"translations\":[],\n        \"translatableFields\":null,\n        \"memberGroup\":null,\n        \"memberId\":[],\n        \"scheduling\":null,\n        \"constraints\":[]\n        },\n    {\n        \"customFields\":{},\n        \"tags\":null,\n        \"metadata\":null,\n        \"messageType\":\"Achievement\",\n        \"subject\":\"Test_subject\",\n        \"body\":\"Test_body\",\n        \"status\":\"Actioned\",\n        \"translations\":[],\n        \"translatableFields\":null,\n        \"memberGroup\":null,\n        \"memberId\":[],\n        \"scheduling\":null,\n        \"constraints\":[]\n        }\n]",
+							"raw": "[\n    {\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33a2f7956\": \"customFieldValue1\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"413acc2a-914b-4214-8287-72c3a3bb3440c749ec30-0c54-474e-8e34-e86c210480a2\": \"meta value\"\n        },\n        \"messageType\":\"Achievement\",\n        \"subject\":\"Test_subject\",\n        \"body\":\"Test_body\",\n        \"status\":\"Actioned\",\n        \"translations\":[],\n        \"translatableFields\":null,\n        \"memberGroup\":null,\n        \"memberId\":[],\n        \"scheduling\":null,\n        \"constraints\":[]\n        },\n    {\n        \"customFields\":{},\n        \"tags\":null,\n        \"metadata\":null,\n        \"messageType\":\"Achievement\",\n        \"subject\":\"Test_subject\",\n        \"body\":\"Test_body\",\n        \"status\":\"Actioned\",\n        \"translations\":[],\n        \"translatableFields\":null,\n        \"memberGroup\":null,\n        \"memberId\":[],\n        \"scheduling\":null,\n        \"constraints\":[]\n        }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -10612,7 +10616,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"tags\": null,\n        \"productRefId\": \"10010\",\n        \"name\": \"test1\",\n        \"description\": null,\n        \"adjustmentFactor\": 1.0,\n        \"actionTypeAdjustmentFactors\": [],\n        \"customFields\": {},\n        \"metadata\": {},\n        \"translations\": [\n            {\n                \"languageKey\": \"ady\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test1\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"ae\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test-temp\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"mdf\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Level-Up\"\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"tags\": null,\n        \"productRefId\": \"10009\",\n        \"name\": \"test1\",\n        \"description\": null,\n        \"adjustmentFactor\": 1.0,\n        \"actionTypeAdjustmentFactors\": [],\n        \"customFields\": {},\n        \"metadata\": {},\n        \"translations\": [\n            {\n                \"languageKey\": \"ady\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test1\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"ae\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test-temp\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"mdf\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Level-Up\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
+							"raw": "[\n    {\n        \"productRefId\": \"10010\",\n        \"name\": \"test1\",\n        \"description\": null,\n        \"adjustmentFactor\": 1.0,\n        \"actionTypeAdjustmentFactors\": [],\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33a2f7956\": \"customFieldValue1\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"413acc2a-914b-4214-8287-72c3a3bb3440c749ec30-0c54-474e-8e34-e86c210480a2\": \"meta value\"\n        },\n        \"translations\": [\n            {\n                \"languageKey\": \"ady\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test1\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"ae\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test-temp\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"mdf\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Level-Up\"\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"tags\": null,\n        \"productRefId\": \"10009\",\n        \"name\": \"test1\",\n        \"description\": null,\n        \"adjustmentFactor\": 1.0,\n        \"actionTypeAdjustmentFactors\": [],\n        \"customFields\": {},\n        \"metadata\": {},\n        \"translations\": [\n            {\n                \"languageKey\": \"ady\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test1\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"ae\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"test-temp\"\n                    }\n                ]\n            },\n            {\n                \"languageKey\": \"mdf\",\n                \"translations\": [\n                    {\n                        \"fieldName\": \"name\",\n                        \"text\": \"Level-Up\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11140,7 +11144,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n     {\n         \"customFields\": {\n        \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n            },\n         \"tags\": null,\n         \"metadata\":{\n             \"02e5273d-795c-4907-beef-f765753300d4\": \"cae11468-b923-4ba8-9d3c-339ea903098d\"\n             },\n        \"name\": \"Test_name-223645ab-cb7b-49da-9ad8-aed0eb870121\",\n        \"description\": \"Test Description\",\n        \"constraints\": [\n            \"isPublic\", \"isSystem\"\n            ],\n        \"hostingOptions\": {\n            \"indexFileName\": \"index_file_name\",\n            \"errorFileName\": \"error_file_name\"\n    }\n},\n{\n         \"customFields\": {\n        \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n            },\n         \"tags\": null,\n         \"metadata\":{\n             \"02e5273d-795c-4907-beef-f765753300d4\": \"cae11468-b923-4ba8-9d3c-339ea903098d\"\n             },\n        \"name\": \"1Test_name-223645ab-cb7b-49da-9ad8-jakafdasjdzc\",\n        \"description\": \"Test Description\",\n        \"constraints\": [\n            \"isPublic\", \"isSystem\"\n            ],\n        \"hostingOptions\": {\n            \"indexFileName\": \"index_file_name\",\n            \"errorFileName\": \"error_file_name\"\n    }\n}\n]",
+							"raw": "[\n    {\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"02e5273d-795c-4907-beef-f765753300d4\": \"cae11468-b923-4ba8-9d3c-339ea903098d\"\n        },\n        \"name\": \"Test_name-223645ab-cb7b-49da-9ad8-aed0eb870121\",\n        \"description\": \"Test Description\",\n        \"constraints\": [\n            \"isPublic\",\n            \"isSystem\"\n        ],\n        \"hostingOptions\": {\n            \"indexFileName\": \"index_file_name\",\n            \"errorFileName\": \"error_file_name\"\n        }\n    },\n    {\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33af2f7956\": \"customFieldValue1\"\n        },\n        \"tags\": null,\n        \"metadata\": {\n            \"02e5273d-795c-4907-beef-f765753300d4\": \"cae11468-b923-4ba8-9d3c-339ea903098d\"\n        },\n        \"name\": \"1Test_name-223645ab-cb7b-49da-9ad8-jakafdasjdzc\",\n        \"description\": \"Test Description\",\n        \"constraints\": [\n            \"isPublic\",\n            \"isSystem\"\n        ],\n        \"hostingOptions\": {\n            \"indexFileName\": \"index_file_name\",\n            \"errorFileName\": \"error_file_name\"\n        }\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11169,12 +11173,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/repositories?id={{repositoryId0}},{{repositoryId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-repositories?id={{repositoryId0}},{{repositoryId1}}&_limit={{ziqniDefaultLimit}}&_skip={{ziqniDefaultSkip}}",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"repositories"
+								"file-repositories"
 							],
 							"query": [
 								{
@@ -11226,7 +11230,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"id\": \"{{repositoryId0}}\",\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": null,\n        \"name\": \"Updated Name\",\n        \"description\": null,\n        \"addConstraints\": null,\n        \"removeConstraints\": [\n            \"isPublic\"\n            ],\n        \"hostingOptions\": null\n}\n]",
+							"raw": "[\n    {\n        \"id\": \"{{repositoryId0}}\",\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": null,\n        \"name\": \"Updated Name\",\n        \"description\": null,\n        \"addConstraints\": [\"isSystem\"],\n        \"removeConstraints\": [\n            \"isPublic\"\n            ],\n        \"hostingOptions\": null\n}\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11234,12 +11238,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/repositories",
+							"raw": "{{ziqniAdminApiBaseUrl}}/file-repositories",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
 							"path": [
-								"repositories"
+								"file-repositories"
 							]
 						},
 						"description": "Update a file object repository in your Ziqni space."
@@ -11398,7 +11402,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"1c71c74d-0085-4b91-b2a2-e8dca1147311\" : \"Meta Value\"},\n        \"entityType\": \"Achievement\",\n        \"entityId\": \"hLZPsX8ByfE0ky4m5slR\",\n        \"name\": \"Test_name-e011c33f-bb76-441d-a37e-95f0704b7e43\",\n        \"description\": \"Test_description\",\n        \"rewardRank\": \"1,2,3,4-10\",\n        \"rewardValue\": 0.7627297482680943,\n        \"icon\": null,\n        \"issueLimit\": null,\n        \"delay\": 100,\n        \"pointInTime\": null,\n        \"period\": 100,\n        \"translations\": null,\n        \"constraints\": [\"memberAcknowledgmentRequired\"],\n        \"rewardTypeId\": \"WopPsX8BMVTzdb9Z3hTw\"\n},\n{\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"1c71c74d-0085-4b91-b2a2-e8dca1147311\":\"ff8ac48c-2598-44be-aec1-81d58d83051e\"},\n        \"entityType\": \"Achievement\",\n        \"entityId\": \"hLZPsX8ByfE0ky4m5slR\",\n        \"name\": \"Test_name-e011c33f-bb76-441d-a37e-95f0704b7e43\",\n        \"description\": \"Test_description\",\n        \"rewardRank\": \"1,2,3,4-10\",\n        \"rewardValue\": 0.7627297482680943,\n        \"icon\": null,\n        \"issueLimit\": null,\n        \"delay\": 100,\n        \"pointInTime\": null,\n        \"period\": 100,\n        \"translations\": null,\n        \"constraints\": [\"memberAcknowledgmentRequired\"],\n        \"rewardTypeId\": \"WopPsX8BMVTzdb9Z3hTw\"\n}\n]",
+							"raw": "[\n    {\n        \"customFields\": {\n            \"test_cf_term7b021076-e317-4074-9028-9e33a2f7956\": \"customFieldValue1\"\n        },\n        \"tags\": [\n            \"Test_key-1f97cdc4-fdb4-4f1e-b93c-e3bc3a7fd69f\"\n        ],\n        \"metadata\": {\n            \"1c71c74d-0085-4b91-b2a2-e8dca1147311\": \"Meta Value\"\n        },\n        \"entityType\": \"Achievement\",\n        \"entityId\": \"hLZPsX8ByfE0ky4m5slR\",\n        \"name\": \"Test_name-e011c33f-bb76-441d-a37e-95f0704b7e43\",\n        \"description\": \"Test_description\",\n        \"rewardRank\": \"1,2,3,4-10\",\n        \"rewardValue\": 0.7627297482680943,\n        \"icon\": null,\n        \"issueLimit\": null,\n        \"delay\": 100,\n        \"pointInTime\": null,\n        \"period\": 100,\n        \"translations\": null,\n        \"constraints\": [\n            \"memberAcknowledgmentRequired\"\n        ],\n        \"rewardTypeId\": \"WopPsX8BMVTzdb9Z3hTw\"\n    },\n    {\n        \"customFields\": null,\n        \"tags\": null,\n        \"metadata\": {\n            \"1c71c74d-0085-4b91-b2a2-e8dca1147311\": \"ff8ac48c-2598-44be-aec1-81d58d83051e\"\n        },\n        \"entityType\": \"Achievement\",\n        \"entityId\": \"hLZPsX8ByfE0ky4m5slR\",\n        \"name\": \"Test_name-e011c33f-bb76-441d-a37e-95f0704b7e43\",\n        \"description\": \"Test_description\",\n        \"rewardRank\": \"1,2,3,4-10\",\n        \"rewardValue\": 0.7627297482680943,\n        \"icon\": null,\n        \"issueLimit\": null,\n        \"delay\": 100,\n        \"pointInTime\": null,\n        \"period\": 100,\n        \"translations\": null,\n        \"constraints\": [\n            \"memberAcknowledgmentRequired\"\n        ],\n        \"rewardTypeId\": \"WopPsX8BMVTzdb9Z3hTw\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11696,6 +11700,46 @@
 				{
 					"name": "Create Reward Types",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -11705,7 +11749,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n   {\n    \"customFields\": {\n        \"test_cf_termd65bcccf-d37f-441a-a96d-d0da55a77719\": [\n            1,\n            2\n        ]\n    },\n    \"tags\": [\n        \"Test_key-7563406f-6983-4308-9422-91838fd40fe7\"\n    ],\n    \"metadata\": {\n        \"fea089d7-f751-432e-8646-838c7769ab1e\": \"f2dfff99-b766-414f-8e33-4d77aebbdb5e\"\n    },\n    \"name\": \"Test_name-b6f072c2-df68-4905-a4f6-c19246ff5dc8\",\n    \"key\": \"Test_key-2148168c-3a6c-48ba-b005-68a67a10aebc\",\n    \"unitOfMeasureType\": \"Other\",\n    \"translations\": [\n        {\n            \"languageKey\": \"csb\",\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"test1\"\n                }\n            ]\n        },\n        {\n            \"languageKey\": \"den\",\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"test-temp\"\n                }\n            ]\n        },\n        {\n            \"languageKey\": \"kmb\",\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"Level-Up\"\n                }\n            ]\n        }\n    ],\n    \"addConstraints\": [\n        \"system\"\n    ]\n}\n]",
+							"raw": "[\n   {\n    \"customFields\": {\n        \"test_cf_termd65bcccf-d37f-441a-a96d-d0da55a77719\": [\n            1,\n            2\n        ]\n    },\n    \"tags\": [\n        \"Test_key-7563406f-6983-4308-9422-91838fd40fe7\"\n    ],\n    \"metadata\": {\n        \"fea089d7-f751-432e-8646-838c7769ab1e\": \"f2dfff99-b766-414f-8e33-4d77aebbdb5e\"\n    },\n    \"name\": \"Test_name-b6f072c2-df68-4905-a4f6-c19246ff5dc8\",\n    \"key\": \"Test_key-2148168c-3a6c-48ba-b005-68a67a10aebc6547\",\n    \"unitOfMeasureType\": \"Other\",\n    \"translations\": [\n        {\n            \"languageKey\": \"csb\",\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"test1\"\n                }\n            ]\n        },\n        {\n            \"languageKey\": \"den\",\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"test-temp\"\n                }\n            ]\n        },\n        {\n            \"languageKey\": \"kmb\",\n            \"translations\": [\n                {\n                    \"fieldName\": \"name\",\n                    \"text\": \"Level-Up\"\n                }\n            ]\n        }\n    ],\n    \"addConstraints\": [\n        \"system\"\n    ]\n}\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11760,10 +11804,50 @@
 				{
 					"name": "Get Reward Types",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ziqniAdminApiBaseUrl}}/reward-types?id={{rewardTypeId0}}&_limit={{defaultLimit}}&_skip={{defaultSkip}}",
+							"raw": "{{ziqniAdminApiBaseUrl}}/reward-types?_limit=20&_skip=0",
 							"host": [
 								"{{ziqniAdminApiBaseUrl}}"
 							],
@@ -11772,19 +11856,12 @@
 							],
 							"query": [
 								{
-									"key": "id",
-									"value": "{{rewardTypeId0}}",
-									"description": "The unique identifiers for reward types"
-								},
-								{
 									"key": "_limit",
-									"value": "{{defaultLimit}}",
-									"description": "Limit the number of records to return"
+									"value": "20"
 								},
 								{
 									"key": "_skip",
-									"value": "{{defaultSkip}}",
-									"description": "Skip the returned records found and return the next batch of records"
+									"value": "0"
 								}
 							]
 						},
@@ -11795,6 +11872,46 @@
 				{
 					"name": "Get Reward Types By Query",
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{ziqniAdminApiAuthUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ziqniAdminApiAccessTokenUrl}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{ziqniAdminApiClientId}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "{{ziqniAdminApiTokenName}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
